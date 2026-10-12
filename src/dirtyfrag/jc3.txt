@@ -1,0 +1,76 @@
+Starting a Gradle Daemon, 2 incompatible and 7 stopped Daemons could not be reused, use --status for details
+WARNING: We recommend using a newer Android Gradle plugin to use compileSdk = 36
+
+This Android Gradle plugin (8.7.3) was tested up to compileSdk = 35.
+
+You are strongly encouraged to update your project to use a newer
+Android Gradle plugin that has been tested with compileSdk = 36.
+
+If you are already using the latest version of the Android Gradle plugin,
+you may need to wait until a newer version with support for compileSdk = 36 is available.
+
+For more information refer to the compatibility table:
+https://d.android.com/r/tools/api-level-support
+
+To suppress this warning, add/update
+    android.suppressUnsupportedCompileSdk=36
+to this project's gradle.properties.
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :app:dataBindingMergeDependencyArtifactsRelease UP-TO-DATE
+> Task :app:generateReleaseResValues UP-TO-DATE
+> Task :app:generateReleaseResources UP-TO-DATE
+> Task :app:mergeReleaseResources UP-TO-DATE
+> Task :app:packageReleaseResources UP-TO-DATE
+> Task :app:parseReleaseLocalResources UP-TO-DATE
+> Task :app:dataBindingGenBaseClassesRelease
+> Task :app:generateReleaseBuildConfig UP-TO-DATE
+> Task :app:javaPreCompileRelease UP-TO-DATE
+> Task :app:mapReleaseSourceSetPaths UP-TO-DATE
+> Task :app:createReleaseCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksRelease UP-TO-DATE
+> Task :app:checkReleaseAarMetadata
+
+> Task :app:processReleaseMainManifest
+D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\AndroidManifest.xml:23:9-41 Warning:
+	android:extractNativeLibs should not be specified in this source AndroidManifest.xml file. See https://d.android.com/guide/topics/manifest/application-element#extractNativeLibs for more information.
+The AGP Upgrade Assistant can remove the attribute from the AndroidManifest.xml file and update the build file accordingly. See https://d.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :app:processReleaseManifest
+> Task :app:processReleaseManifestForPackage
+> Task :app:processReleaseResources
+
+> Task :app:compileReleaseJavaWithJavac FAILED
+D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\java\honor\root\ShizukuBait.java:67: 错误: newProcess(String[],String[],String) 在 Shizuku 中是 private 访问控制
+        Process p = Shizuku.newProcess(cmdLine, null, null);
+                           ^
+注: D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\java\honor\root\ShizukuBait.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个错误
+
+[Incubating] Problems report is available at: file:///D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileReleaseJavaWithJavac' (registered by plugin 'com.android.internal.application').
+> Compilation failed; see the compiler output below.
+  注: D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\java\honor\root\ShizukuBait.java使用或覆盖了已过时的 API。
+  注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+  D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\java\honor\root\ShizukuBait.java:67: 错误: newProcess(String[],String[],String) 在 Shizuku 中是 private 访问控制
+          Process p = Shizuku.newProcess(cmdLine, null, null);
+                             ^
+  1 个错误
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.7.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 16s
+18 actionable tasks: 7 executed, 11 up-to-date

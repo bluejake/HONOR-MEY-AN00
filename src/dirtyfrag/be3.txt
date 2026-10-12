@@ -1,0 +1,38 @@
+D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\java\honor\root\MainActivity.java:1204: 错误: 找不到符号
+                    Build.MODEL, Build.FINGERPRINT, DeviceProfile.readKernelVersion());
+                    ^
+  符号:   变量 Build
+  位置: 类 MainActivity
+D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\java\honor\root\MainActivity.java:1204: 错误: 找不到符号
+                    Build.MODEL, Build.FINGERPRINT, DeviceProfile.readKernelVersion());
+                                 ^
+  符号:   变量 Build
+  位置: 类 MainActivity
+注: D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\java\honor\root\WatchService.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+2 个错误
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileReleaseJavaWithJavac' (registered by plugin 'com.android.internal.application').
+> Compilation failed; see the compiler output below.
+  注: D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\java\honor\root\WatchService.java使用或覆盖了已过时的 API。
+  注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+  D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\java\honor\root\MainActivity.java:1204: 错误: 找不到符号
+                      Build.MODEL, Build.FINGERPRINT, DeviceProfile.readKernelVersion());
+                      ^
+    符号:   变量 Build
+    位置: 类 MainActivity
+  D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\java\honor\root\MainActivity.java:1204: 错误: 找不到符号
+                      Build.MODEL, Build.FINGERPRINT, DeviceProfile.readKernelVersion());
+                                   ^
+    符号:   变量 Build
+    位置: 类 MainActivity
+  2 个错误
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 9s

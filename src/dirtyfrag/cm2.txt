@@ -1,0 +1,497 @@
+Starting a Gradle Daemon, 2 incompatible and 11 stopped Daemons could not be reused, use --status for details
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :app:configureCMakeRelWithDebInfo[arm64-v8a]
+
+> Task :app:buildCMakeRelWithDebInfo[arm64-v8a] FAILED
+C/C++: ninja: Entering directory `D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\.cxx\RelWithDebInfo\2s2u6k4p\arm64-v8a'
+C/C++: In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/asm_str.c:12:
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:443:13: warning: unused function 'obf_init_runtime' [-Wunused-function]
+C/C++:   443 | static void obf_init_runtime(void) { }
+C/C++:       |             ^~~~~~~~~~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:447:14: warning: unused function 'obf_cat2' [-Wunused-function]
+C/C++:   447 | static char *obf_cat2(int a, int b) {
+C/C++:       |              ^~~~~~~~
+C/C++: 2 warnings generated.
+C/C++: In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/asset_names.c:7:
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:438:13: warning: unused function 'obf_fill' [-Wunused-function]
+C/C++:   438 | static void obf_fill(char *dst, size_t n, const char *src) {
+C/C++:       |             ^~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:443:13: warning: unused function 'obf_init_runtime' [-Wunused-function]
+C/C++:   443 | static void obf_init_runtime(void) { }
+C/C++:       |             ^~~~~~~~~~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:447:14: warning: unused function 'obf_cat2' [-Wunused-function]
+C/C++:   447 | static char *obf_cat2(int a, int b) {
+C/C++:       |              ^~~~~~~~
+C/C++: 3 warnings generated.
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/crypto_core.c:4:40: warning: '/*' within block comment [-Wcomment]
+C/C++:     4 |  * Trust model (frozen with license_kit/*.py):
+C/C++:       |                                        ^
+C/C++: In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/crypto_core.c:28:
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/aes256.h:111:13: warning: unused function 'aes256_ecb_decrypt' [-Wunused-function]
+C/C++:   111 | static void aes256_ecb_decrypt(const uint8_t key[32], const uint8_t ct[16], uint8_t pt[16]) {
+C/C++:       |             ^~~~~~~~~~~~~~~~~~
+C/C++: In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/crypto_core.c:32:
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:438:13: warning: unused function 'obf_fill' [-Wunused-function]
+C/C++:   438 | static void obf_fill(char *dst, size_t n, const char *src) {
+C/C++:       |             ^~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:443:13: warning: unused function 'obf_init_runtime' [-Wunused-function]
+C/C++:   443 | static void obf_init_runtime(void) { }
+C/C++:       |             ^~~~~~~~~~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:447:14: warning: unused function 'obf_cat2' [-Wunused-function]
+C/C++:   447 | static char *obf_cat2(int a, int b) {
+C/C++:       |              ^~~~~~~~
+C/C++: 5 warnings generated.
+C/C++: In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/elf_parser.c:7:
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:438:13: warning: unused function 'obf_fill' [-Wunused-function]
+C/C++:   438 | static void obf_fill(char *dst, size_t n, const char *src) {
+C/C++:       |             ^~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:443:13: warning: unused function 'obf_init_runtime' [-Wunused-function]
+C/C++:   443 | static void obf_init_runtime(void) { }
+C/C++:       |             ^~~~~~~~~~~~~~~~
+C/C++: 2 warnings generated.
+C/C++: <HOME>\.workbuddy\binaries\android\android-ndk-r27c\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android32 --sysroot=<HOME>/.workbuddy/binaries/android/android-ndk-r27c/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -ID:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -ID:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni -Wall -Wextra -fno-stack-protector -fomit-frame-pointer -fvisibility=hidden -ffunction-sections -fdata-sections -Oz -flto=thin -Wno-format-security -O2 -g -DNDEBUG -fPIE -fno-stack-protector -fomit-frame-pointer -fvisibility=hidden -ffunction-sections -fdata-sections -Oz -Wno-format-security -MD -MT CMakeFiles/exp_cli.dir/exp_cli.c.o -MF CMakeFiles\exp_cli.dir\exp_cli.c.o.d -o CMakeFiles/exp_cli.dir/exp_cli.c.o -c D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:76:5: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+C/C++:    76 |     REPORTLN("exp_cli start: window=%dms orphan_int=%ds kmi=%s",
+C/C++:       |     ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+C/C++:     9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+C/C++:       |                                     ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+C/C++:   163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+C/C++:       |      ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:85:9: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+C/C++:    85 |         REPORTLN("lic.bin missing at %s", lic_path);
+C/C++:       |         ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+C/C++:     9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+C/C++:       |                                     ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+C/C++:   163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+C/C++:       |      ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:89:9: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+C/C++:    89 |         REPORTLN("fp.bin missing/short at %s", fp_path);
+C/C++:       |         ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+C/C++:     9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+C/C++:       |                                     ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+C/C++:   163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+C/C++:       |      ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:95:9: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+C/C++:    95 |         REPORTLN("blob.bin missing at %s", blob_path);
+C/C++:       |         ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+C/C++:     9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+C/C++:       |                                     ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+C/C++:   163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+C/C++:       |      ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:98:5: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+C/C++:    98 |     REPORTLN("lic=%zu blob=%zu fp loaded", lic_len, blob_len);
+C/C++:       |     ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+C/C++:     9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+C/C++:       |                                     ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+C/C++:   163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+C/C++:       |      ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:104:5: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+C/C++:   104 |     REPORTLN("lic_unlock rc=%d unlocked=%d", urc, lic_is_unlocked());
+C/C++:       |     ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+C/C++:     9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+C/C++:       |                                     ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+C/C++:   163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+C/C++:       |      ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:106:9: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+C/C++:   106 |         REPORTLN("unlock failed - check lic/fp/blob pairing");
+C/C++:       |         ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+C/C++:     9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+C/C++:       |                                     ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+C/C++:   163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+C/C++:       |      ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:116:18: warning: unused variable 'km' [-Wunused-variable]
+C/C++:   116 |             char km[32];
+C/C++:       |                  ^~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:120:5: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+C/C++:   120 |     REPORTLN("kernel: android%d %d.%d", andr, kmaj, kmin);
+C/C++:       |     ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+C/C++:     9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+C/C++:       |                                     ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+C/C++:   163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+C/C++:       |      ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:125:16: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+C/C++:   125 |     if (!sh) { REPORTLN("no splicehelper in bundle"); return 4; }
+C/C++:       |                ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+C/C++:     9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+C/C++:       |                                     ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+C/C++:   163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+C/C++:       |      ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:129:5: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+C/C++:   129 |     REPORTLN(OBF(45), sh_len_padded);
+C/C++:       |     ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+C/C++:     9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+C/C++:       |                                     ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+C/C++:   163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+C/C++:       |      ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:131:30: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+C/C++:   131 |     if (ret) { free(sh_buf); REPORTLN(OBF(46), ret); return ret; }
+C/C++:       |                              ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+C/C++:     9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+C/C++:       |                                     ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+C/C++:   163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+C/C++:       |      ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:140:17: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+C/C++:   140 |                 REPORTLN(OBF(47));
+C/C++:       |                 ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+C/C++:     9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+C/C++:       |                                     ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+C/C++:   163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+C/C++:       |      ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:144:13: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+C/C++:   144 |             REPORTLN(OBF(48));
+C/C++:       |             ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+C/C++:     9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+C/C++:       |                                     ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+C/C++:   163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+C/C++:       |      ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:155:13: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+C/C++:   155 |             REPORTLN("  bundle has: %s", nm ? nm : "?");
+C/C++:       |             ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+C/C++:     9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+C/C++:       |                                     ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+C/C++:   163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+C/C++:       |      ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:162:21: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+C/C++:   162 |     if (!ko_data) { REPORTLN(OBF(46), -100); return -100; }
+C/C++:       |                     ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+C/C++:     9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+C/C++:       |                                     ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+C/C++:   163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+C/C++:       |      ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:167:5: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+C/C++:   167 |     REPORTLN(OBF(49), libcxx_ko_target, ko_len_padded);
+C/C++:       |     ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+C/C++:     9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+C/C++:       |                                     ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+C/C++:   163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+C/C++:       |      ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:170:16: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+C/C++:   170 |     if (ret) { REPORTLN(OBF(46), ret); return ret; }
+C/C++:       |                ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+C/C++:     9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+C/C++:       |                                     ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+C/C++:   163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+C/C++:       |      ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:174:25: error: use of undeclared identifier 'libcxx_r'; did you mean 'libcxx_len'?
+C/C++:   174 |                    &r, &libcxx_r)) goto done;
+C/C++:       |                         ^~~~~~~~
+C/C++:       |                         libcxx_len
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:429:17: note: 'libcxx_len' declared here
+C/C++:   429 | extern uint32_t libcxx_len;
+C/C++:       |                 ^
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:176:5: error: use of undeclared identifier 'rc'
+C/C++:   176 |     rc = 2;
+C/C++:       |     ^
+C/C++: fatal error: too many errors emitted, stopping now [-ferror-limit=]
+C/C++: 1 warning and 20 errors generated.
+C/C++: In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:25:
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:447:14: warning: unused function 'obf_cat2' [-Wunused-function]
+C/C++:   447 | static char *obf_cat2(int a, int b) {
+C/C++:       |              ^~~~~~~~
+C/C++: 1 warning generated.
+C/C++: In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:25:
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:447:14: warning: unused function 'obf_cat2' [-Wunused-function]
+C/C++:   447 | static char *obf_cat2(int a, int b) {
+C/C++:       |              ^~~~~~~~
+C/C++: 1 warning generated.
+
+[Incubating] Problems report is available at: file:///D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:buildCMakeRelWithDebInfo[arm64-v8a]' (registered by plugin 'com.android.internal.application').
+> com.android.ide.common.process.ProcessException: ninja: Entering directory `D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\.cxx\RelWithDebInfo\2s2u6k4p\arm64-v8a'
+  [1/10] Building C object CMakeFiles/exp_cli.dir/asm_str.c.o
+  In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/asm_str.c:12:
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:443:13: warning: unused function 'obf_init_runtime' [-Wunused-function]
+    443 | static void obf_init_runtime(void) { }
+        |             ^~~~~~~~~~~~~~~~
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:447:14: warning: unused function 'obf_cat2' [-Wunused-function]
+    447 | static char *obf_cat2(int a, int b) {
+        |              ^~~~~~~~
+  2 warnings generated.
+  [2/10] Building C object CMakeFiles/exp_cli.dir/asset_names.c.o
+  In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/asset_names.c:7:
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:438:13: warning: unused function 'obf_fill' [-Wunused-function]
+    438 | static void obf_fill(char *dst, size_t n, const char *src) {
+        |             ^~~~~~~~
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:443:13: warning: unused function 'obf_init_runtime' [-Wunused-function]
+    443 | static void obf_init_runtime(void) { }
+        |             ^~~~~~~~~~~~~~~~
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:447:14: warning: unused function 'obf_cat2' [-Wunused-function]
+    447 | static char *obf_cat2(int a, int b) {
+        |              ^~~~~~~~
+  3 warnings generated.
+  [3/10] Building C object CMakeFiles/exp_cli.dir/crypto_core.c.o
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/crypto_core.c:4:40: warning: '/*' within block comment [-Wcomment]
+      4 |  * Trust model (frozen with license_kit/*.py):
+        |                                        ^
+  In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/crypto_core.c:28:
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/aes256.h:111:13: warning: unused function 'aes256_ecb_decrypt' [-Wunused-function]
+    111 | static void aes256_ecb_decrypt(const uint8_t key[32], const uint8_t ct[16], uint8_t pt[16]) {
+        |             ^~~~~~~~~~~~~~~~~~
+  In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/crypto_core.c:32:
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:438:13: warning: unused function 'obf_fill' [-Wunused-function]
+    438 | static void obf_fill(char *dst, size_t n, const char *src) {
+        |             ^~~~~~~~
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:443:13: warning: unused function 'obf_init_runtime' [-Wunused-function]
+    443 | static void obf_init_runtime(void) { }
+        |             ^~~~~~~~~~~~~~~~
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:447:14: warning: unused function 'obf_cat2' [-Wunused-function]
+    447 | static char *obf_cat2(int a, int b) {
+        |              ^~~~~~~~
+  5 warnings generated.
+  [4/10] Building C object CMakeFiles/exp_cli.dir/elf_parser.c.o
+  In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/elf_parser.c:7:
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:438:13: warning: unused function 'obf_fill' [-Wunused-function]
+    438 | static void obf_fill(char *dst, size_t n, const char *src) {
+        |             ^~~~~~~~
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:443:13: warning: unused function 'obf_init_runtime' [-Wunused-function]
+    443 | static void obf_init_runtime(void) { }
+        |             ^~~~~~~~~~~~~~~~
+  2 warnings generated.
+  [5/10] Building C object CMakeFiles/exp_cli.dir/exp_cli.c.o
+  FAILED: CMakeFiles/exp_cli.dir/exp_cli.c.o 
+  <HOME>\.workbuddy\binaries\android\android-ndk-r27c\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android32 --sysroot=<HOME>/.workbuddy/binaries/android/android-ndk-r27c/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -ID:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -ID:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni -Wall -Wextra -fno-stack-protector -fomit-frame-pointer -fvisibility=hidden -ffunction-sections -fdata-sections -Oz -flto=thin -Wno-format-security -O2 -g -DNDEBUG -fPIE -fno-stack-protector -fomit-frame-pointer -fvisibility=hidden -ffunction-sections -fdata-sections -Oz -Wno-format-security -MD -MT CMakeFiles/exp_cli.dir/exp_cli.c.o -MF CMakeFiles\exp_cli.dir\exp_cli.c.o.d -o CMakeFiles/exp_cli.dir/exp_cli.c.o -c D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:76:5: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+     76 |     REPORTLN("exp_cli start: window=%dms orphan_int=%ds kmi=%s",
+        |     ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+      9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+        |                                     ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+    163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+        |      ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:85:9: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+     85 |         REPORTLN("lic.bin missing at %s", lic_path);
+        |         ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+      9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+        |                                     ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+    163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+        |      ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:89:9: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+     89 |         REPORTLN("fp.bin missing/short at %s", fp_path);
+        |         ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+      9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+        |                                     ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+    163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+        |      ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:95:9: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+     95 |         REPORTLN("blob.bin missing at %s", blob_path);
+        |         ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+      9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+        |                                     ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+    163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+        |      ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:98:5: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+     98 |     REPORTLN("lic=%zu blob=%zu fp loaded", lic_len, blob_len);
+        |     ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+      9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+        |                                     ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+    163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+        |      ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:104:5: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+    104 |     REPORTLN("lic_unlock rc=%d unlocked=%d", urc, lic_is_unlocked());
+        |     ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+      9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+        |                                     ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+    163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+        |      ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:106:9: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+    106 |         REPORTLN("unlock failed - check lic/fp/blob pairing");
+        |         ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+      9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+        |                                     ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+    163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+        |      ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:116:18: warning: unused variable 'km' [-Wunused-variable]
+    116 |             char km[32];
+        |                  ^~
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:120:5: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+    120 |     REPORTLN("kernel: android%d %d.%d", andr, kmaj, kmin);
+        |     ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+      9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+        |                                     ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+    163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+        |      ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:125:16: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+    125 |     if (!sh) { REPORTLN("no splicehelper in bundle"); return 4; }
+        |                ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+      9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+        |                                     ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+    163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+        |      ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:129:5: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+    129 |     REPORTLN(OBF(45), sh_len_padded);
+        |     ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+      9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+        |                                     ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+    163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+        |      ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:131:30: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+    131 |     if (ret) { free(sh_buf); REPORTLN(OBF(46), ret); return ret; }
+        |                              ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+      9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+        |                                     ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+    163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+        |      ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:140:17: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+    140 |                 REPORTLN(OBF(47));
+        |                 ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+      9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+        |                                     ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+    163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+        |      ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:144:13: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+    144 |             REPORTLN(OBF(48));
+        |             ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+      9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+        |                                     ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+    163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+        |      ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:155:13: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+    155 |             REPORTLN("  bundle has: %s", nm ? nm : "?");
+        |             ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+      9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+        |                                     ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+    163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+        |      ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:162:21: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+    162 |     if (!ko_data) { REPORTLN(OBF(46), -100); return -100; }
+        |                     ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+      9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+        |                                     ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+    163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+        |      ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:167:5: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+    167 |     REPORTLN(OBF(49), libcxx_ko_target, ko_len_padded);
+        |     ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+      9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+        |                                     ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+    163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+        |      ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:170:16: error: use of undeclared identifier 'reporter'; did you mean 'reportln'?
+    170 |     if (ret) { REPORTLN(OBF(46), ret); return ret; }
+        |                ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/reporter.h:9:37: note: expanded from macro 'REPORTLN'
+      9 | #define REPORTLN(fmt, ...) reportln(reporter, fmt __VA_OPT__(,) __VA_ARGS__)
+        |                                     ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:163:6: note: 'reportln' declared here
+    163 | void reportln(struct Reporter *r, const char *fmt, ...) {
+        |      ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:174:25: error: use of undeclared identifier 'libcxx_r'; did you mean 'libcxx_len'?
+    174 |                    &r, &libcxx_r)) goto done;
+        |                         ^~~~~~~~
+        |                         libcxx_len
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:429:17: note: 'libcxx_len' declared here
+    429 | extern uint32_t libcxx_len;
+        |                 ^
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:176:5: error: use of undeclared identifier 'rc'
+    176 |     rc = 2;
+        |     ^
+  fatal error: too many errors emitted, stopping now [-ferror-limit=]
+  1 warning and 20 errors generated.
+  [6/10] Building C object CMakeFiles/exp_cli.dir/exp.c.o
+  In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:25:
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:447:14: warning: unused function 'obf_cat2' [-Wunused-function]
+    447 | static char *obf_cat2(int a, int b) {
+        |              ^~~~~~~~
+  1 warning generated.
+  [7/10] Building ASM object CMakeFiles/exp_cli.dir/libcxx.S.o
+  [8/10] Building C object CMakeFiles/exp.dir/exp.c.o
+  In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:25:
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:447:14: warning: unused function 'obf_cat2' [-Wunused-function]
+    447 | static char *obf_cat2(int a, int b) {
+        |              ^~~~~~~~
+  1 warning generated.
+  ninja: build stopped: subcommand failed.
+  
+  C++ build system [build] failed while executing:
+      @echo off
+      "<HOME>\\.workbuddy\\binaries\\android\\cmake\\3.22.1\\bin\\ninja.exe" ^
+        -C ^
+        "D:\\MEY-AN00-root-repro\\analysis\\scratch\\DirtyFrag\\app\\.cxx\\RelWithDebInfo\\2s2u6k4p\\arm64-v8a" ^
+        exp ^
+        exp_cli
+    from D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.7.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 8s
+2 actionable tasks: 2 executed

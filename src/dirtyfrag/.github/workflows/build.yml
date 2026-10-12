@@ -1,0 +1,252 @@
+name: Build DirtyFrag Universal (source)
+
+on:
+  repository_dispatch:
+    types: [ksu-update]
+  workflow_dispatch:
+    inputs:
+      ksu_ref:
+        description: 'tiann/KernelSU ref (SHA/branch/tag). default: main HEAD'
+        required: false
+  push:
+    branches: [master]
+    paths:
+      - 'app/**'
+      - 'dirtyfrag-lkm/**'
+      - '.github/workflows/build.yml'
+
+concurrency:
+  group: dirtyfrag-build
+  cancel-in-progress: true
+
+env:
+  DDK_RELEASE: '20260828'
+  KSU_REPO: tiann/KernelSU
+
+jobs:
+  resolve-ksu:
+    name: Pin KernelSU commit (with CI artifacts)
+    runs-on: ubuntu-latest
+    outputs:
+      sha: ${{ steps.pin.outputs.sha }}
+      run_id: ${{ steps.pin.outputs.run_id }}
+    steps:
+      - id: pin
+        run: |
+          # priority: dispatched sha > manual ref > upstream HEAD
+          SHA="${{ github.event.client_payload.sha }}"
+          if [ -z "$SHA" ]; then
+            REF="${{ inputs.ksu_ref }}"
+            [ -z "$REF" ] && REF="HEAD"
+            SHA=$(git ls-remote "https://github.com/${{ env.KSU_REPO }}.git" "$REF" | awk '{print $1}' | head -1)
+          fi
+          [ -n "$SHA" ] || { echo "resolve failed"; exit 1; }
+          echo "sha=$SHA" >> "$GITHUB_OUTPUT"
+          echo "pinned KernelSU commit: $SHA"
+
+  ksud:
+    name: Build ksud (arm64) @ pinned commit
+    runs-on: ubuntu-latest
+    needs: [resolve-ksu]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ env.KSU_REPO }}
+          ref: ${{ needs.resolve-ksu.outputs.sha }}
+          fetch-depth: 0
+      - name: Setup rustup
+        run: |
+          rustup update stable
+          rustup target add aarch64-linux-android
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: userspace/ksud
+          cache-targets: false
+      - uses: nttld/setup-ndk@v1
+        id: setup-ndk
+        with:
+          ndk-version: r29
+      - name: Build ksud
+        env:
+          ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
+        run: |
+          source .github/scripts/setup-rust-build.sh aarch64-linux-android 26
+          cargo build --target aarch64-linux-android --release --manifest-path ./userspace/ksud/Cargo.toml
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ksu-daemon
+          path: target/aarch64-linux-android/release/ksud
+          retention-days: 1
+
+  kernelsu-ko:
+    name: Build kernelsu.ko (${{ matrix.kmi }})
+    runs-on: ubuntu-latest
+    needs: [resolve-ksu]
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        kmi: [android12-5.10, android13-5.10, android13-5.15, android14-5.15, android15-6.6, android16-6.12, android17-6.18]
+    container:
+      image: ghcr.io/ylarod/ddk-min:${{ matrix.kmi }}-${{ vars.DDK_RELEASE || '20260828' }}
+      options: --privileged
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ env.KSU_REPO }}
+          ref: ${{ needs.resolve-ksu.outputs.sha }}
+          fetch-depth: 0
+      - name: git safe.directory
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+      - name: Build kernelsu.ko (default signature = official manager)
+        run: |
+          cd kernel
+          echo "KDIR=${KDIR:-<unset>}"
+          CONFIG_KSU=m CC=clang make
+          llvm-strip -d kernelsu.ko
+          cp kernelsu.ko ../kernelsu-${{ matrix.kmi }}.ko
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kernelsu-${{ matrix.kmi }}
+          path: kernelsu-${{ matrix.kmi }}.ko
+          retention-days: 1
+
+  dirtyfrag-ko:
+    name: Build dirtyfrag.ko (${{ matrix.kmi }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        kmi: [android12-5.10, android13-5.10, android13-5.15, android14-5.15, android15-6.6, android16-6.12, android17-6.18]
+    container:
+      image: ghcr.io/ylarod/ddk-min:${{ matrix.kmi }}-${{ vars.DDK_RELEASE || '20260828' }}
+      options: --privileged
+    steps:
+      - uses: actions/checkout@v4
+      - name: git safe.directory
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+      - name: Build dirtyfrag.ko
+        run: |
+          cd dirtyfrag-lkm
+          echo "KDIR=${KDIR:-<unset>}"
+          make
+          llvm-objcopy --strip-unneeded \
+            -R .comment -R .note.gnu.build-id -R .note.gnu.property -R .note.Linux -R .note.GNU-stack \
+            -R .BTF -R .BTF.base -R .llvm_addrsig \
+            -R .hyp.text -R .hyp.bss -R .hyp.rodata -R .hyp.event_ids \
+            -R .hyp.patchable_function_entries -R .hyp.data \
+            dirtyfrag.ko 2>/dev/null || true
+          cp dirtyfrag.ko ../dirtyfrag-${{ matrix.kmi }}.ko
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dirtyfrag-${{ matrix.kmi }}
+          path: dirtyfrag-${{ matrix.kmi }}.ko
+          retention-days: 1
+
+  pack-apk:
+    name: Pack DirtyFrag Universal APK
+    runs-on: ubuntu-latest
+    needs: [ksud, kernelsu-ko, dirtyfrag-ko]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: dirtyfrag-*
+          path: ko-stage
+      - uses: actions/download-artifact@v4
+        with:
+          name: ksu-daemon
+          path: daemon-stage
+      - name: Place dirtyfrag KO blobs
+        run: |
+          for d in ko-stage/dirtyfrag-*; do
+            kmi=${d#ko-stage/dirtyfrag-}
+            cp "$d/dirtyfrag-$kmi.ko" "app/src/main/jni/ko/dirtyfrag-$kmi.ko"
+          done
+          ls -la app/src/main/jni/ko/
+      - name: Place KSU assets
+        run: |
+          cp daemon-stage/ksud app/src/main/assets/ksu-daemon
+          chmod 755 app/src/main/assets/ksu-daemon
+          ls -la app/src/main/assets/
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - name: Build + sign APK
+        run: |
+          # app/keystore.jks is committed: password/alias are public in
+          # build.gradle.kts (upstream convention) - pins update identity
+          ./gradlew :app:assembleRelease
+          mkdir -p out
+          cp app/build/outputs/apk/release/dirtyfrag.apk out/DirtyFrag-universal.apk
+      - name: Collect outputs
+        run: cd out && sha256sum * > SHA256SUMS && cat SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: DirtyFrag-universal
+          path: out/
+          retention-days: 1
+
+  nightly:
+    name: Publish rolling nightly (version-unified set)
+    runs-on: ubuntu-latest
+    needs: [pack-apk, resolve-ksu]
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: DirtyFrag-universal
+          path: out/
+      - name: Fetch OFFICIAL manager built from the same commit (no PR builds)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          SHA="${{ needs.resolve-ksu.outputs.sha }}"
+          # only main-branch push/schedule runs; PR runs ship me.weishu.kernelsu.pr
+          # (temp keystore + different package) and would pollute the nightly
+          RUNS=$(gh api "repos/tiann/KernelSU/actions/workflows/build-manager.yml/runs?status=success&per_page=30" \
+            --jq '.workflow_runs[] | select(.head_branch == "main" and .event != "pull_request") | .id')
+          RUN=""
+          for r in $RUNS; do
+            if [ "$r" = "$SHA" ] || [ -z "$SHA" ]; then RUN=$r; break; fi
+            # prefer the run whose head_sha matches the pinned commit
+            H=$(gh api "repos/tiann/KernelSU/actions/runs/$r" --jq '.head_sha')
+            if [ "$H" = "$SHA" ]; then RUN=$r; break; fi
+            [ -z "$RUN" ] && RUN=$r   # keep the first main-branch run as fallback
+          done
+          [ -z "$RUN" ] && RUN=$(gh api "repos/tiann/KernelSU/actions/workflows/build-manager.yml/runs?status=success&per_page=1&head_branch=main" --jq '.workflow_runs[0].id')
+          echo "manager source run: $RUN (main branch, non-PR)"
+          for name in manager manager-gradle; do
+            if curl -sfL -o mgr.zip "https://nightly.link/tiann/KernelSU/actions/runs/$RUN/$name.zip"; then
+              rm -rf mgrx && mkdir mgrx && unzip -qo mgr.zip -d mgrx
+              APK=$(find mgrx -name '*.apk' | head -1)
+              AAPT2=$(ls "$ANDROID_HOME"/build-tools/*/aapt2 2>/dev/null | sort -V | tail -1)
+              PKG=$("$AAPT2" dump packagename "$APK" 2>/dev/null || echo unknown)
+              echo "manager package: $PKG"
+              if [ "$PKG" != "me.weishu.kernelsu" ]; then
+                echo "::error::manager package is $PKG, expected me.weishu.kernelsu (PR build leaked?)"
+                exit 1
+              fi
+              cp "$APK" out/KernelSU-manager-arm64.apk
+              echo "manager staged: $APK"
+              break
+            fi
+          done
+          [ -f out/KernelSU-manager-arm64.apk ] || { echo "::error::no official manager artifact fetched"; exit 1; }
+          ls -la out/
+      - name: Publish rolling nightly
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          SHORT=$(echo "${{ needs.resolve-ksu.outputs.sha }}" | cut -c1-7)
+          gh release delete nightly --yes --cleanup-tag 2>/dev/null || true
+          gh release create nightly out/* \
+            --title "nightly $(date +%Y%m%d-%H%M) (ksu@$SHORT)" \
+            --notes "Built from tiann/KernelSU@$SHORT (version-unified).
+          - DirtyFrag-universal.apk: trigger + embedded kernelsu.ko x7 + ksud (all same commit)
+          - KernelSU-manager-arm64.apk: official build of the same commit, signature-paired
+          Install/update manager, install DirtyFrag, reboot, tap DirtyFrag once."

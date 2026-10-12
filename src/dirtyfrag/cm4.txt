@@ -1,0 +1,134 @@
+Starting a Gradle Daemon, 2 incompatible and 13 stopped Daemons could not be reused, use --status for details
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :app:configureCMakeRelWithDebInfo[arm64-v8a]
+
+> Task :app:buildCMakeRelWithDebInfo[arm64-v8a] FAILED
+C/C++: ninja: Entering directory `D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\.cxx\RelWithDebInfo\2s2u6k4p\arm64-v8a'
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:117:18: warning: unused variable 'km' [-Wunused-variable]
+C/C++:   117 |             char km[32];
+C/C++:       |                  ^~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:175:9: warning: variable 'rc' is used uninitialized whenever 'if' condition is true [-Wsometimes-uninitialized]
+C/C++:   175 |     if (patch_hook(OBF(64), OBF(65),
+C/C++:       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++:   176 |                    libcxx_data, libcxx_len, libcxx_start, libcxx_first_inst_copy,
+C/C++:       |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++:   177 |                    reporter, &libcxx_r)) goto done;
+C/C++:       |                    ~~~~~~~~~~~~~~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:218:12: note: uninitialized use occurs here
+C/C++:   218 |     return rc;
+C/C++:       |            ^~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:175:5: note: remove the 'if' if its condition is always false
+C/C++:   175 |     if (patch_hook(OBF(64), OBF(65),
+C/C++:       |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++:   176 |                    libcxx_data, libcxx_len, libcxx_start, libcxx_first_inst_copy,
+C/C++:       |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++:   177 |                    reporter, &libcxx_r)) goto done;
+C/C++:       |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:125:11: note: initialize the variable 'rc' to silence this warning
+C/C++:   125 |     int rc;
+C/C++:       |           ^
+C/C++:       |            = 0
+C/C++: In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:23:
+C/C++: In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:25:
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:447:14: warning: unused function 'obf_cat2' [-Wunused-function]
+C/C++:   447 | static char *obf_cat2(int a, int b) {
+C/C++:       |              ^~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:49:12: warning: unused function 'hex_to_bytes' [-Wunused-function]
+C/C++:    49 | static int hex_to_bytes(const char *hex, uint8_t *out, size_t out_len) {
+C/C++:       |            ^~~~~~~~~~~~
+C/C++: 4 warnings generated.
+C/C++: cmd.exe /C "cd . && <HOME>\.workbuddy\binaries\android\android-ndk-r27c\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android32 --sysroot=<HOME>/.workbuddy/binaries/android/android-ndk-r27c/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -ID:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni -Wall -Wextra -fno-stack-protector -fomit-frame-pointer -fvisibility=hidden -ffunction-sections -fdata-sections -Oz -flto=thin -Wno-format-security -O2 -g -DNDEBUG -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments   -Wl,--gc-sections    -Wl,--gc-sections -static CMakeFiles/exp_cli.dir/exp_cli.c.o CMakeFiles/exp_cli.dir/exp.c.o CMakeFiles/exp_cli.dir/libcxx.S.o CMakeFiles/exp_cli.dir/elf_parser.c.o CMakeFiles/exp_cli.dir/crypto_core.c.o CMakeFiles/exp_cli.dir/asm_str.c.o CMakeFiles/exp_cli.dir/asset_names.c.o -o D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\build\intermediates\cxx\RelWithDebInfo\2s2u6k4p\obj\arm64-v8a\exp_cli  -latomic -lm && cd ."
+C/C++: ld.lld: error: duplicate symbol: JNI_OnLoad
+C/C++: >>> defined in CMakeFiles/exp_cli.dir/exp_cli.c.o
+C/C++: >>> defined in CMakeFiles/exp_cli.dir/exp.c.o
+C/C++: ld.lld: error: duplicate symbol: reportfmt
+C/C++: >>> defined in CMakeFiles/exp_cli.dir/exp_cli.c.o
+C/C++: >>> defined in CMakeFiles/exp_cli.dir/exp.c.o
+C/C++: ld.lld: error: duplicate symbol: reportln
+C/C++: >>> defined in CMakeFiles/exp_cli.dir/exp_cli.c.o
+C/C++: >>> defined in CMakeFiles/exp_cli.dir/exp.c.o
+C/C++: clang: error: linker command failed with exit code 1 (use -v to see invocation)
+C/C++: ninja: build stopped: subcommand failed.
+
+[Incubating] Problems report is available at: file:///D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:buildCMakeRelWithDebInfo[arm64-v8a]' (registered by plugin 'com.android.internal.application').
+> com.android.ide.common.process.ProcessException: ninja: Entering directory `D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\.cxx\RelWithDebInfo\2s2u6k4p\arm64-v8a'
+  [1/2] Building C object CMakeFiles/exp_cli.dir/exp_cli.c.o
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:117:18: warning: unused variable 'km' [-Wunused-variable]
+    117 |             char km[32];
+        |                  ^~
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:175:9: warning: variable 'rc' is used uninitialized whenever 'if' condition is true [-Wsometimes-uninitialized]
+    175 |     if (patch_hook(OBF(64), OBF(65),
+        |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    176 |                    libcxx_data, libcxx_len, libcxx_start, libcxx_first_inst_copy,
+        |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    177 |                    reporter, &libcxx_r)) goto done;
+        |                    ~~~~~~~~~~~~~~~~~~~~
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:218:12: note: uninitialized use occurs here
+    218 |     return rc;
+        |            ^~
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:175:5: note: remove the 'if' if its condition is always false
+    175 |     if (patch_hook(OBF(64), OBF(65),
+        |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    176 |                    libcxx_data, libcxx_len, libcxx_start, libcxx_first_inst_copy,
+        |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    177 |                    reporter, &libcxx_r)) goto done;
+        |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:125:11: note: initialize the variable 'rc' to silence this warning
+    125 |     int rc;
+        |           ^
+        |            = 0
+  In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:23:
+  In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:25:
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:447:14: warning: unused function 'obf_cat2' [-Wunused-function]
+    447 | static char *obf_cat2(int a, int b) {
+        |              ^~~~~~~~
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:49:12: warning: unused function 'hex_to_bytes' [-Wunused-function]
+     49 | static int hex_to_bytes(const char *hex, uint8_t *out, size_t out_len) {
+        |            ^~~~~~~~~~~~
+  4 warnings generated.
+  [2/2] Linking C executable D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\build\intermediates\cxx\RelWithDebInfo\2s2u6k4p\obj\arm64-v8a\exp_cli
+  FAILED: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/build/intermediates/cxx/RelWithDebInfo/2s2u6k4p/obj/arm64-v8a/exp_cli 
+  cmd.exe /C "cd . && <HOME>\.workbuddy\binaries\android\android-ndk-r27c\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android32 --sysroot=<HOME>/.workbuddy/binaries/android/android-ndk-r27c/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -ID:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni -Wall -Wextra -fno-stack-protector -fomit-frame-pointer -fvisibility=hidden -ffunction-sections -fdata-sections -Oz -flto=thin -Wno-format-security -O2 -g -DNDEBUG -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments   -Wl,--gc-sections    -Wl,--gc-sections -static CMakeFiles/exp_cli.dir/exp_cli.c.o CMakeFiles/exp_cli.dir/exp.c.o CMakeFiles/exp_cli.dir/libcxx.S.o CMakeFiles/exp_cli.dir/elf_parser.c.o CMakeFiles/exp_cli.dir/crypto_core.c.o CMakeFiles/exp_cli.dir/asm_str.c.o CMakeFiles/exp_cli.dir/asset_names.c.o -o D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\build\intermediates\cxx\RelWithDebInfo\2s2u6k4p\obj\arm64-v8a\exp_cli  -latomic -lm && cd ."
+  ld.lld: error: duplicate symbol: JNI_OnLoad
+  >>> defined in CMakeFiles/exp_cli.dir/exp_cli.c.o
+  >>> defined in CMakeFiles/exp_cli.dir/exp.c.o
+  
+  ld.lld: error: duplicate symbol: reportfmt
+  >>> defined in CMakeFiles/exp_cli.dir/exp_cli.c.o
+  >>> defined in CMakeFiles/exp_cli.dir/exp.c.o
+  
+  ld.lld: error: duplicate symbol: reportln
+  >>> defined in CMakeFiles/exp_cli.dir/exp_cli.c.o
+  >>> defined in CMakeFiles/exp_cli.dir/exp.c.o
+  clang: error: linker command failed with exit code 1 (use -v to see invocation)
+  ninja: build stopped: subcommand failed.
+  
+  C++ build system [build] failed while executing:
+      @echo off
+      "<HOME>\\.workbuddy\\binaries\\android\\cmake\\3.22.1\\bin\\ninja.exe" ^
+        -C ^
+        "D:\\MEY-AN00-root-repro\\analysis\\scratch\\DirtyFrag\\app\\.cxx\\RelWithDebInfo\\2s2u6k4p\\arm64-v8a" ^
+        exp ^
+        exp_cli
+    from D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.7.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 7s
+2 actionable tasks: 2 executed

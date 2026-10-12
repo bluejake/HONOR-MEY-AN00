@@ -1,0 +1,38 @@
+D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\java\honor\root\MainActivity.java:899: ´íÎó: Î´½áÊøµÄ×Ö·û´®ÎÄ×Ö
+        report("
+               ^
+D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\java\honor\root\MainActivity.java:900: ´íÎó: Î´½áÊøµÄ×Ö·û´®ÎÄ×Ö
+==============================================");
+                                              ^
+D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\java\honor\root\MainActivity.java:905: ´íÎó: Î´½áÊøµÄ×Ö·û´®ÎÄ×Ö
+        report("==============================================
+               ^
+D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\java\honor\root\MainActivity.java:906: ´íÎó: Î´½áÊøµÄ×Ö·û´®ÎÄ×Ö
+");
+^
+4 ¸ö´íÎó
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileReleaseJavaWithJavac' (registered by plugin 'com.android.internal.application').
+> Compilation failed; see the compiler output below.
+  D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\java\honor\root\MainActivity.java:899: ´íÎó: Î´½áÊøµÄ×Ö·û´®ÎÄ×Ö
+          report("
+                 ^
+  D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\java\honor\root\MainActivity.java:900: ´íÎó: Î´½áÊøµÄ×Ö·û´®ÎÄ×Ö
+  ==============================================");
+                                                ^
+  D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\java\honor\root\MainActivity.java:905: ´íÎó: Î´½áÊøµÄ×Ö·û´®ÎÄ×Ö
+          report("==============================================
+                 ^
+  D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\java\honor\root\MainActivity.java:906: ´íÎó: Î´½áÊøµÄ×Ö·û´®ÎÄ×Ö
+  ");
+  ^
+  4 ¸ö´íÎó
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 8s

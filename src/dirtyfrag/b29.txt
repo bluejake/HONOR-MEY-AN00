@@ -1,0 +1,228 @@
+Starting a Gradle Daemon, 2 incompatible and 9 stopped Daemons could not be reused, use --status for details
+WARNING: We recommend using a newer Android Gradle plugin to use compileSdk = 36
+
+This Android Gradle plugin (8.7.3) was tested up to compileSdk = 35.
+
+You are strongly encouraged to update your project to use a newer
+Android Gradle plugin that has been tested with compileSdk = 36.
+
+If you are already using the latest version of the Android Gradle plugin,
+you may need to wait until a newer version with support for compileSdk = 36 is available.
+
+For more information refer to the compatibility table:
+https://d.android.com/r/tools/api-level-support
+
+To suppress this warning, add/update
+    android.suppressUnsupportedCompileSdk=36
+to this project's gradle.properties.
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :app:configureCMakeRelWithDebInfo[arm64-v8a]
+
+> Task :app:buildCMakeRelWithDebInfo[arm64-v8a]
+C/C++: ninja: Entering directory `D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\.cxx\RelWithDebInfo\2s2u6k4p\arm64-v8a'
+C/C++: In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/asm_str.c:12:
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:467:13: warning: unused function 'obf_init_runtime' [-Wunused-function]
+C/C++:   467 | static void obf_init_runtime(void) { }
+C/C++:       |             ^~~~~~~~~~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:471:14: warning: unused function 'obf_cat2' [-Wunused-function]
+C/C++:   471 | static char *obf_cat2(int a, int b) {
+C/C++:       |              ^~~~~~~~
+C/C++: 2 warnings generated.
+C/C++: In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/asm_str.c:12:
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:467:13: warning: unused function 'obf_init_runtime' [-Wunused-function]
+C/C++:   467 | static void obf_init_runtime(void) { }
+C/C++:       |             ^~~~~~~~~~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:471:14: warning: unused function 'obf_cat2' [-Wunused-function]
+C/C++:   471 | static char *obf_cat2(int a, int b) {
+C/C++:       |              ^~~~~~~~
+C/C++: 2 warnings generated.
+C/C++: In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/asset_names.c:7:
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:462:13: warning: unused function 'obf_fill' [-Wunused-function]
+C/C++:   462 | static void obf_fill(char *dst, size_t n, const char *src) {
+C/C++:       |             ^~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:467:13: warning: unused function 'obf_init_runtime' [-Wunused-function]
+C/C++:   467 | static void obf_init_runtime(void) { }
+C/C++:       |             ^~~~~~~~~~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:471:14: warning: unused function 'obf_cat2' [-Wunused-function]
+C/C++:   471 | static char *obf_cat2(int a, int b) {
+C/C++:       |              ^~~~~~~~
+C/C++: 3 warnings generated.
+C/C++: In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/asset_names.c:7:
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:462:13: warning: unused function 'obf_fill' [-Wunused-function]
+C/C++:   462 | static void obf_fill(char *dst, size_t n, const char *src) {
+C/C++:       |             ^~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:467:13: warning: unused function 'obf_init_runtime' [-Wunused-function]
+C/C++:   467 | static void obf_init_runtime(void) { }
+C/C++:       |             ^~~~~~~~~~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:471:14: warning: unused function 'obf_cat2' [-Wunused-function]
+C/C++:   471 | static char *obf_cat2(int a, int b) {
+C/C++:       |              ^~~~~~~~
+C/C++: 3 warnings generated.
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/crypto_core.c:4:40: warning: '/*' within block comment [-Wcomment]
+C/C++:     4 |  * Trust model (frozen with license_kit/*.py):
+C/C++:       |                                        ^
+C/C++: In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/crypto_core.c:28:
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/aes256.h:111:13: warning: unused function 'aes256_ecb_decrypt' [-Wunused-function]
+C/C++:   111 | static void aes256_ecb_decrypt(const uint8_t key[32], const uint8_t ct[16], uint8_t pt[16]) {
+C/C++:       |             ^~~~~~~~~~~~~~~~~~
+C/C++: In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/crypto_core.c:32:
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:462:13: warning: unused function 'obf_fill' [-Wunused-function]
+C/C++:   462 | static void obf_fill(char *dst, size_t n, const char *src) {
+C/C++:       |             ^~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:467:13: warning: unused function 'obf_init_runtime' [-Wunused-function]
+C/C++:   467 | static void obf_init_runtime(void) { }
+C/C++:       |             ^~~~~~~~~~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:471:14: warning: unused function 'obf_cat2' [-Wunused-function]
+C/C++:   471 | static char *obf_cat2(int a, int b) {
+C/C++:       |              ^~~~~~~~
+C/C++: 5 warnings generated.
+C/C++: In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/elf_parser.c:7:
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:462:13: warning: unused function 'obf_fill' [-Wunused-function]
+C/C++:   462 | static void obf_fill(char *dst, size_t n, const char *src) {
+C/C++:       |             ^~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:467:13: warning: unused function 'obf_init_runtime' [-Wunused-function]
+C/C++:   467 | static void obf_init_runtime(void) { }
+C/C++:       |             ^~~~~~~~~~~~~~~~
+C/C++: 2 warnings generated.
+C/C++: In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/elf_parser.c:7:
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:462:13: warning: unused function 'obf_fill' [-Wunused-function]
+C/C++:   462 | static void obf_fill(char *dst, size_t n, const char *src) {
+C/C++:       |             ^~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:467:13: warning: unused function 'obf_init_runtime' [-Wunused-function]
+C/C++:   467 | static void obf_init_runtime(void) { }
+C/C++:       |             ^~~~~~~~~~~~~~~~
+C/C++: 2 warnings generated.
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/crypto_core.c:4:40: warning: '/*' within block comment [-Wcomment]
+C/C++:     4 |  * Trust model (frozen with license_kit/*.py):
+C/C++:       |                                        ^
+C/C++: In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/crypto_core.c:28:
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/aes256.h:111:13: warning: unused function 'aes256_ecb_decrypt' [-Wunused-function]
+C/C++:   111 | static void aes256_ecb_decrypt(const uint8_t key[32], const uint8_t ct[16], uint8_t pt[16]) {
+C/C++:       |             ^~~~~~~~~~~~~~~~~~
+C/C++: In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/crypto_core.c:32:
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:462:13: warning: unused function 'obf_fill' [-Wunused-function]
+C/C++:   462 | static void obf_fill(char *dst, size_t n, const char *src) {
+C/C++:       |             ^~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:467:13: warning: unused function 'obf_init_runtime' [-Wunused-function]
+C/C++:   467 | static void obf_init_runtime(void) { }
+C/C++:       |             ^~~~~~~~~~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:471:14: warning: unused function 'obf_cat2' [-Wunused-function]
+C/C++:   471 | static char *obf_cat2(int a, int b) {
+C/C++:       |              ^~~~~~~~
+C/C++: 5 warnings generated.
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:117:18: warning: unused variable 'km' [-Wunused-variable]
+C/C++:   117 |             char km[32];
+C/C++:       |                  ^~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:175:9: warning: variable 'rc' is used uninitialized whenever 'if' condition is true [-Wsometimes-uninitialized]
+C/C++:   175 |     if (patch_hook(OBF(64), OBF(65),
+C/C++:       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++:   176 |                    libcxx_data, libcxx_len, libcxx_start, libcxx_first_inst_copy,
+C/C++:       |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++:   177 |                    reporter, &libcxx_r)) goto done;
+C/C++:       |                    ~~~~~~~~~~~~~~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:218:12: note: uninitialized use occurs here
+C/C++:   218 |     return rc;
+C/C++:       |            ^~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:175:5: note: remove the 'if' if its condition is always false
+C/C++:   175 |     if (patch_hook(OBF(64), OBF(65),
+C/C++:       |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++:   176 |                    libcxx_data, libcxx_len, libcxx_start, libcxx_first_inst_copy,
+C/C++:       |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++:   177 |                    reporter, &libcxx_r)) goto done;
+C/C++:       |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:125:11: note: initialize the variable 'rc' to silence this warning
+C/C++:   125 |     int rc;
+C/C++:       |           ^
+C/C++:       |            = 0
+C/C++: In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:23:
+C/C++: In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:25:
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:471:14: warning: unused function 'obf_cat2' [-Wunused-function]
+C/C++:   471 | static char *obf_cat2(int a, int b) {
+C/C++:       |              ^~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:49:12: warning: unused function 'hex_to_bytes' [-Wunused-function]
+C/C++:    49 | static int hex_to_bytes(const char *hex, uint8_t *out, size_t out_len) {
+C/C++:       |            ^~~~~~~~~~~~
+C/C++: 4 warnings generated.
+C/C++: In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:25:
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:471:14: warning: unused function 'obf_cat2' [-Wunused-function]
+C/C++:   471 | static char *obf_cat2(int a, int b) {
+C/C++:       |              ^~~~~~~~
+C/C++: 1 warning generated.
+
+> Task :app:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :app:mergeReleaseNativeLibs UP-TO-DATE
+> Task :app:stripReleaseDebugSymbols UP-TO-DATE
+> Task :app:extractReleaseNativeSymbolTables UP-TO-DATE
+> Task :app:mergeReleaseNativeDebugMetadata UP-TO-DATE
+> Task :app:checkReleaseDuplicateClasses UP-TO-DATE
+> Task :app:dataBindingMergeDependencyArtifactsRelease UP-TO-DATE
+> Task :app:generateReleaseResValues UP-TO-DATE
+> Task :app:generateReleaseResources
+> Task :app:compileReleaseAidl
+> Task :app:mergeReleaseResources
+> Task :app:packageReleaseResources
+> Task :app:generateReleaseBuildConfig
+> Task :app:javaPreCompileRelease UP-TO-DATE
+> Task :app:checkReleaseAarMetadata UP-TO-DATE
+> Task :app:parseReleaseLocalResources
+> Task :app:mapReleaseSourceSetPaths
+> Task :app:dataBindingGenBaseClassesRelease UP-TO-DATE
+> Task :app:createReleaseCompatibleScreenManifests
+> Task :app:extractDeepLinksRelease UP-TO-DATE
+
+> Task :app:processReleaseMainManifest
+D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\AndroidManifest.xml:23:9-41 Warning:
+	android:extractNativeLibs should not be specified in this source AndroidManifest.xml file. See https://d.android.com/guide/topics/manifest/application-element#extractNativeLibs for more information.
+The AGP Upgrade Assistant can remove the attribute from the AndroidManifest.xml file and update the build file accordingly. See https://d.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :app:processReleaseManifest
+> Task :app:mergeReleaseArtProfile UP-TO-DATE
+> Task :app:extractProguardFiles UP-TO-DATE
+> Task :app:processReleaseJavaRes NO-SOURCE
+> Task :app:mergeReleaseJavaResource UP-TO-DATE
+> Task :app:mergeReleaseStartupProfile UP-TO-DATE
+> Task :app:mergeReleaseShaders UP-TO-DATE
+> Task :app:compileReleaseShaders NO-SOURCE
+> Task :app:generateReleaseAssets UP-TO-DATE
+> Task :app:mergeReleaseAssets UP-TO-DATE
+> Task :app:compressReleaseAssets UP-TO-DATE
+> Task :app:extractReleaseVersionControlInfo
+> Task :app:collectReleaseDependencies UP-TO-DATE
+> Task :app:sdkReleaseDependencyData UP-TO-DATE
+> Task :app:validateSigningRelease UP-TO-DATE
+> Task :app:writeReleaseAppMetadata UP-TO-DATE
+> Task :app:writeReleaseSigningConfigVersions UP-TO-DATE
+> Task :app:processReleaseManifestForPackage
+> Task :app:processReleaseResources
+
+> Task :app:compileReleaseJavaWithJavac FAILED
+D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\java\honor\root\MainActivity.java:1218: 错误: 非法的表达式开始
+        }    private void initDeviceProfile() {
+             ^
+1 个错误
+
+[Incubating] Problems report is available at: file:///D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileReleaseJavaWithJavac' (registered by plugin 'com.android.internal.application').
+> Compilation failed; see the compiler output below.
+  D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\java\honor\root\MainActivity.java:1218: 错误: 非法的表达式开始
+          }    private void initDeviceProfile() {
+               ^
+  1 个错误
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.7.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 18s
+40 actionable tasks: 16 executed, 24 up-to-date

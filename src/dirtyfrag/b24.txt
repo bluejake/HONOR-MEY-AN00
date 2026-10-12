@@ -1,0 +1,125 @@
+Starting a Gradle Daemon, 2 incompatible and 3 stopped Daemons could not be reused, use --status for details
+WARNING: We recommend using a newer Android Gradle plugin to use compileSdk = 36
+
+This Android Gradle plugin (8.7.3) was tested up to compileSdk = 35.
+
+You are strongly encouraged to update your project to use a newer
+Android Gradle plugin that has been tested with compileSdk = 36.
+
+If you are already using the latest version of the Android Gradle plugin,
+you may need to wait until a newer version with support for compileSdk = 36 is available.
+
+For more information refer to the compatibility table:
+https://d.android.com/r/tools/api-level-support
+
+To suppress this warning, add/update
+    android.suppressUnsupportedCompileSdk=36
+to this project's gradle.properties.
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :app:configureCMakeRelWithDebInfo[arm64-v8a]
+
+> Task :app:buildCMakeRelWithDebInfo[arm64-v8a]
+C/C++: ninja: Entering directory `D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\.cxx\RelWithDebInfo\2s2u6k4p\arm64-v8a'
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:117:18: warning: unused variable 'km' [-Wunused-variable]
+C/C++:   117 |             char km[32];
+C/C++:       |                  ^~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:175:9: warning: variable 'rc' is used uninitialized whenever 'if' condition is true [-Wsometimes-uninitialized]
+C/C++:   175 |     if (patch_hook(OBF(64), OBF(65),
+C/C++:       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++:   176 |                    libcxx_data, libcxx_len, libcxx_start, libcxx_first_inst_copy,
+C/C++:       |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++:   177 |                    reporter, &libcxx_r)) goto done;
+C/C++:       |                    ~~~~~~~~~~~~~~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:218:12: note: uninitialized use occurs here
+C/C++:   218 |     return rc;
+C/C++:       |            ^~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:175:5: note: remove the 'if' if its condition is always false
+C/C++:   175 |     if (patch_hook(OBF(64), OBF(65),
+C/C++:       |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++:   176 |                    libcxx_data, libcxx_len, libcxx_start, libcxx_first_inst_copy,
+C/C++:       |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++:   177 |                    reporter, &libcxx_r)) goto done;
+C/C++:       |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:125:11: note: initialize the variable 'rc' to silence this warning
+C/C++:   125 |     int rc;
+C/C++:       |           ^
+C/C++:       |            = 0
+C/C++: In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:23:
+C/C++: In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:25:
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:471:14: warning: unused function 'obf_cat2' [-Wunused-function]
+C/C++:   471 | static char *obf_cat2(int a, int b) {
+C/C++:       |              ^~~~~~~~
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp_cli.c:49:12: warning: unused function 'hex_to_bytes' [-Wunused-function]
+C/C++:    49 | static int hex_to_bytes(const char *hex, uint8_t *out, size_t out_len) {
+C/C++:       |            ^~~~~~~~~~~~
+C/C++: 4 warnings generated.
+C/C++: In file included from D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:25:
+C/C++: D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/obf_strings.h:471:14: warning: unused function 'obf_cat2' [-Wunused-function]
+C/C++:   471 | static char *obf_cat2(int a, int b) {
+C/C++:       |              ^~~~~~~~
+C/C++: 1 warning generated.
+
+> Task :app:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :app:mergeReleaseNativeLibs
+> Task :app:checkReleaseDuplicateClasses UP-TO-DATE
+> Task :app:compileReleaseAidl UP-TO-DATE
+> Task :app:dataBindingMergeDependencyArtifactsRelease UP-TO-DATE
+> Task :app:generateReleaseResValues UP-TO-DATE
+> Task :app:generateReleaseResources UP-TO-DATE
+> Task :app:stripReleaseDebugSymbols
+> Task :app:mergeReleaseResources UP-TO-DATE
+> Task :app:packageReleaseResources UP-TO-DATE
+> Task :app:parseReleaseLocalResources UP-TO-DATE
+> Task :app:dataBindingGenBaseClassesRelease UP-TO-DATE
+> Task :app:generateReleaseBuildConfig UP-TO-DATE
+> Task :app:javaPreCompileRelease UP-TO-DATE
+> Task :app:checkReleaseAarMetadata UP-TO-DATE
+> Task :app:mapReleaseSourceSetPaths UP-TO-DATE
+> Task :app:createReleaseCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksRelease UP-TO-DATE
+> Task :app:processReleaseMainManifest UP-TO-DATE
+> Task :app:processReleaseManifest UP-TO-DATE
+> Task :app:processReleaseManifestForPackage UP-TO-DATE
+> Task :app:extractReleaseNativeSymbolTables
+> Task :app:processReleaseResources UP-TO-DATE
+> Task :app:mergeReleaseNativeDebugMetadata UP-TO-DATE
+
+> Task :app:compileReleaseJavaWithJavac FAILED
+D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\java\honor\root\MainActivity.java:177: 错误: 找不到符号
+            if (t.contains(s(215))) {
+                           ^
+  符号:   方法 s(int)
+  位置: 类 MainActivity
+注: D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\java\honor\root\WatchService.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个错误
+
+[Incubating] Problems report is available at: file:///D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileReleaseJavaWithJavac' (registered by plugin 'com.android.internal.application').
+> Compilation failed; see the compiler output below.
+  注: D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\java\honor\root\WatchService.java使用或覆盖了已过时的 API。
+  注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+  D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\src\main\java\honor\root\MainActivity.java:177: 错误: 找不到符号
+              if (t.contains(s(215))) {
+                             ^
+    符号:   方法 s(int)
+    位置: 类 MainActivity
+  1 个错误
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.7.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 11s
+27 actionable tasks: 6 executed, 21 up-to-date

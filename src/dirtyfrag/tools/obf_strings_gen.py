@@ -1,0 +1,204 @@
+#!/usr/bin/env python3
+"""把 C 源码里的字符串字面量搬到 XOR 表，改为运行时解密 (OBF(id))。
+
+用法: python obf_strings_gen.py <dir> <file1.c> [file2.c ...]
+输出: <dir>/obf_strings.h，并原地改写各 .c（git 有原版，可回滚）
+"""
+import os, re, sys
+
+SIMPLE_ESC = {'n':10,'t':9,'r':13,'a':7,'b':8,'f':12,'v':11,'\\':92,"'":39,'"':34,'?':63,'0':0}
+
+def decode_c_str(t):
+    """C 字符串字面量的源码文本 -> 真实字节（处理 \\n \\xHH \\NNN）。"""
+    out = bytearray(); i = 0
+    while i < len(t):
+        c = t[i]
+        if c == '\\' and i + 1 < len(t):
+            n = t[i+1]
+            if n in SIMPLE_ESC:
+                out.append(SIMPLE_ESC[n]); i += 2; continue
+            if n == 'x':
+                j, h = i + 2, ''
+                while j < len(t) and t[j] in '0123456789abcdefABCDEF':
+                    h += t[j]; j += 1
+                out.append(int(h, 16) if h else 0); i = j; continue
+            if n in '01234567':
+                j, o = i + 1, ''
+                while j < len(t) and t[j] in '01234567' and len(o) < 3:
+                    o += t[j]; j += 1
+                out.append(int(o, 8)); i = j; continue
+            out.append(ord(n)); i += 2; continue
+        out.extend(c.encode('utf-8')); i += 1
+    return bytes(out)
+
+def split_literals(src):
+    out, i, n = [], 0, len(src)
+    while i < n:
+        c = src[i]
+        if c == '/' and i + 1 < n and src[i+1] == '/':
+            j = src.find('\n', i); i = n if j < 0 else j; continue
+        if c == '/' and i + 1 < n and src[i+1] == '*':
+            j = src.find('*/', i+2); i = n if j < 0 else j+2; continue
+        if c == "'":
+            i += 1
+            while i < n and src[i] != "'":
+                i += 2 if src[i] == '\\' else 1
+            i += 1; continue
+        if c == '"':
+            j, buf = i + 1, []
+            while j < n and src[j] != '"':
+                if src[j] == '\\':
+                    buf.append(src[j]); j += 1
+                    if j < n: buf.append(src[j]); j += 1
+                else:
+                    buf.append(src[j]); j += 1
+            raw = ''.join(buf)
+            out.append((i, j + 1, decode_c_str(raw)))
+            i = j + 1; continue
+        i += 1
+    return out
+
+ARRAY_INIT = re.compile(r'(char|uint8_t|int8_t)\s+\w+\s*\[[^\]]*\]\s*=\s*$')
+
+def collect_and_rewrite(path, table, ids):
+    src = open(path, encoding='utf-8').read()
+    lines = src.split('\n')
+    new_lines, changed, skipped = [], 0, 0
+    for ln in lines:
+        s = ln.strip()
+        if s.startswith('#'):
+            new_lines.append(ln); continue
+        if ARRAY_INIT.search(ln) or re.match(r'^static\s+(const\s+)?char\s+\w+\s*\[', s):
+            new_lines.append(ln); skipped += 1; continue
+        lits = split_literals(ln)
+        if not lits:
+            new_lines.append(ln); continue
+        pieces, last = [], 0
+        for (a, b, raw) in lits:
+            if raw not in ids:
+                ids[raw] = len(table); table.append(raw)
+            pieces.append(ln[last:a]); pieces.append('OBF(%d)' % ids[raw]); last = b
+            changed += 1
+        pieces.append(ln[last:])
+        new_lines.append(''.join(pieces))
+    out = '\n'.join(new_lines)
+    inc = '#include "obf_strings.h"'
+    if inc not in out:
+        idxs = [m.start() for m in re.finditer(r'^[ \t]*#include\b.*$', out, re.M)]
+        if idxs:
+            m = re.search(r'^.*$', out[idxs[-1]:], re.M)
+            pos = idxs[-1] + len(m.group(0))
+        else:
+            pos = 0
+        out = out[:pos] + '\n' + inc + out[pos:]
+    open(path, 'w', encoding='utf-8').write(out)
+    return changed, skipped
+
+def load_skey(d):
+    """从 obf_data.h 还原被掩码的 AES sbox（OBF_SKEY 的真实值）。"""
+    od = open(os.path.join(d, 'obf_data.h'), encoding='utf-8').read()
+    def arr(name):
+        m = re.search(name + r'\[256\] = \{(.*?)\}', od, re.S)
+        return [int(x, 16) for x in re.findall(r'0x([0-9a-fA-F]{2})', m.group(1))]
+    sb, mk = arr('_obf_sbox'), arr('_obf_sbox_mask')
+    return [sb[i] ^ mk[i] for i in range(256)]
+
+def load_existing(path, skey):
+    """从已有 obf_strings.h 反解出明文 table（密文 + 每条的 k + 同一套 keystream）。
+
+    增量模式必须用：源文件里的字面量已经变成 OBF(n) 了，重新扫只会拿到 0 条，
+    直接 emit 会把整张表炸掉（2026-10-08 踩过一次，114 条被覆盖成 6 条）。
+    """
+    h = open(path, encoding='utf-8').read()
+    arrs = {int(n): [int(x, 16) for x in re.findall(r'0x([0-9a-fA-F]{2})', b)]
+            for n, b in re.findall(r'_obf_b(\d+)\[\d*\]\s*=\s*\{([^}]*)\}', h)}
+    tab = [(int(a), int(l), int(k, 16)) for a, l, k in
+           re.findall(r'\{\s*_obf_b(\d+),\s*(\d+),\s*0x([0-9a-fA-F]{2})\s*\}', h)]
+    out = []
+    for aid, ln, k in tab:
+        b = arrs[aid]
+        out.append(bytes(b[j] ^ ((k ^ skey[(j + k) & 0xFF] ^ (j * 31)) & 0xFF) for j in range(ln)))
+    return out
+
+def emit_header(path, table, skey):
+    maxlen = max([max(len(b) for b in table)] + [8])
+    for b in table:
+        if 0 in b[:-1]:
+            print('WARN 内嵌 NUL（运行时会被截断）:', b)
+    L = []
+    L.append('/* auto-generated by tools/obf_strings_gen.py - do not edit */')
+    L.append('#pragma once')
+    L.append('#include <stdint.h>')
+    L.append('#include <stddef.h>')
+    L.append('#include <stdio.h>')
+    L.append('#include "obf_data.h"')
+    L.append('')
+    L.append('#define OBF_COUNT %d' % len(table))
+    L.append('#define OBF_MAXLEN %d' % (maxlen + 1))
+    L.append('')
+    for i, b in enumerate(table):
+        k = 0x11 + (i * 37) % 239
+        enc = bytes(b[j] ^ ((k ^ skey[(j + k) & 0xFF] ^ (j * 31)) & 0xFF) for j in range(len(b)))
+        L.append('static const uint8_t _obf_b%d[%d] = {%s};' % (i, len(b), ','.join('0x%02x' % x for x in enc)))
+    L.append('')
+    L.append('typedef struct { const uint8_t *b; uint16_t len; uint8_t k; } _obf_ent_t;')
+    L.append('static const _obf_ent_t _obf_tab[OBF_COUNT] = {')
+    for i, b in enumerate(table):
+        L.append('    { _obf_b%d, %d, 0x%02x },' % (i, len(b), 0x11 + (i * 37) % 239))
+    L.append('};')
+    L.append('')
+    L.append('/* 每个 id 独立 TLS 缓冲：每次调用都重新解密，无缓存、无线程竞争 */')
+    L.append('static __thread char _obf_tls[OBF_COUNT][OBF_MAXLEN];')
+    L.append('static char *_obf_dec(int id) {')
+    L.append('    const _obf_ent_t *e = &_obf_tab[id];')
+    L.append('    char *out = _obf_tls[id];')
+    L.append('    for (uint16_t i = 0; i < e->len; i++) {')
+    L.append('        volatile uint8_t s = (uint8_t)(e->k ^ OBF_SKEY((i + e->k) & 0xFF) ^ (uint8_t)(i * 31));')
+    L.append('        out[i] = (char)(e->b[i] ^ s);')
+    L.append('    }')
+    L.append('    out[e->len] = 0;')
+    L.append('    return out;')
+    L.append('}')
+    L.append('#define OBF(id) _obf_dec(id)')
+    L.append('')
+    L.append('static void obf_fill(char *dst, size_t n, const char *src) {')
+    L.append('    size_t i = 0;')
+    L.append('    for (; src[i] && i + 1 < n; i++) dst[i] = src[i];')
+    L.append('    dst[i] = 0;')
+    L.append('}')
+    L.append('static void obf_init_runtime(void) { }')
+    L.append('')
+    L.append('/* 相邻字面量拼接：运行时拼（源码里 "a" "b" 会被拆成两个 id）*/')
+    L.append('/* 手写拷贝而非 snprintf("%s%s")：避免 .rodata 里躺一个明文格式串 */')
+    L.append('static char *obf_cat2(int a, int b) {')
+    L.append('    static __thread char buf[256];')
+    L.append('    char *p = buf; const char *s = OBF(a);')
+    L.append('    while (*s && p < buf + 255) *p++ = *s++;')
+    L.append('    s = OBF(b);')
+    L.append('    while (*s && p < buf + 255) *p++ = *s++;')
+    L.append('    *p = 0;')
+    L.append('    return buf;')
+    L.append('}')
+    open(path, 'w', encoding='utf-8').write('\n'.join(L) + '\n')
+
+def main():
+    args = sys.argv[1:]
+    append = False
+    if args and args[0] == '--append':
+        append = True; args = args[1:]
+    d, files = args[0], args[1:]
+    table, ids = [], {}
+    hdr = os.path.join(d, 'obf_strings.h')
+    if append and os.path.exists(hdr):
+        table = load_existing(hdr, load_skey(d))
+        for i, b in enumerate(table):
+            ids.setdefault(b, i)
+        print('append mode: base table = %d (已有 id 全部保留)' % len(table))
+    base = len(table)
+    for f in files:
+        ch, sk = collect_and_rewrite(os.path.join(d, f), table, ids)
+        print('%-16s replaced=%-4d skipped=%d' % (f, ch, sk))
+    emit_header(hdr, table, load_skey(d))
+    print('total strings =', len(table), '(新增 %d) -> obf_strings.h' % (len(table) - base))
+
+main()

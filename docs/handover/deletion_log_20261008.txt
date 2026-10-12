@@ -1,0 +1,1099 @@
+=== 删除清单备份 2026-10-08 16:24:47 ===
+--- A1 analysis/panic (318 db) ---
+_pull.db
+can_0.db
+canary_judge.db
+diagw11.db
+e84.db
+exec_out_test.db
+fp_compare.db
+fp_final.db
+fp_late.db
+fp_late2.db
+live.db
+live_log.db
+log.db
+log2.db
+log3.db
+log4.db
+log6.db
+log7.db
+log8.db
+log_day2.db
+log_retry1.db
+o10.db
+o10b.db
+o10c.db
+oA.db
+oAA.db
+oAB.db
+oAB_now.db
+oAC.db
+oAD.db
+oAE.db
+oAF.db
+oAG.db
+oAH.db
+oAI.db
+oAJ.db
+oAK.db
+oAL.db
+oAM.db
+oAN.db
+oAO.db
+oAP.db
+oAQ.db
+oAR.db
+oAS.db
+oAT.db
+oAU.db
+oAV.db
+oAW.db
+oAX.db
+oAY.db
+oAZ.db
+oB.db
+oBB.db
+oBC.db
+oBD.db
+oBE.db
+oBF.db
+oBF2.db
+oBF_recover.db
+oBG.db
+oBG_recover.db
+oBH.db
+oBH_recover.db
+oBI.db
+oBK.db
+oBK_recover.db
+oBK_recover2.db
+oBK_recover3.db
+oBL.db
+oBM.db
+oBN.db
+oBP.db
+oBQ.db
+oBR.db
+oBS.db
+oBT.db
+oBU.db
+oBV.db
+oBV_r4.db
+oBV_recover.db
+oBV_recover2.db
+oBV_recover3.db
+oBW.db
+oBX.db
+oBY.db
+oBZ.db
+oC.db
+oC0.db
+oC2.db
+oC2_judge.db
+oC2_judge2.db
+oC2_recover.db
+oC4.db
+oC6.db
+oC8.db
+oC9.db
+oD.db
+oD0.db
+oD1.db
+oD2.db
+oD3.db
+oD4.db
+oE.db
+oE1.db
+oE10.db
+oE11.db
+oE12.db
+oE13.db
+oE14.db
+oE15.db
+oE16.db
+oE17.db
+oE18.db
+oE19.db
+oE2.db
+oE20.db
+oE21.db
+oE22.db
+oE23.db
+oE24.db
+oE25.db
+oE26.db
+oE27.db
+oE28.db
+oE29.db
+oE3.db
+oE30.db
+oE31.db
+oE32.db
+oE33.db
+oE35.db
+oE36_2.db
+oE36_4.db
+oE37.db
+oE38.db
+oE39.db
+oE39b.db
+oE4.db
+oE40.db
+oE5.db
+oE6.db
+oE7.db
+oE8.db
+oE9.db
+oF.db
+oF1.db
+oF10.db
+oF11.db
+oF12.db
+oF13.db
+oF14.db
+oF2.db
+oF3.db
+oF4.db
+oF5.db
+oF6_t1.db
+oF6_t2.db
+oF7.db
+oF8.db
+oF9.db
+oG.db
+oG1.db
+oG2.db
+oG3.db
+oG4.db
+oG5_s0.db
+oG5_s10.db
+oG6.db
+oG7.db
+oG8.db
+oG9.db
+oH.db
+oH1.db
+oH2.db
+oH3.db
+oH4.db
+oH5_1.db
+oH5_2.db
+oH5_3.db
+oH6_1.db
+oH6_2.db
+oH7.db
+oH8.db
+oH9.db
+oI.db
+oJ.db
+oK.db
+oL.db
+oM.db
+oN.db
+oP.db
+oP0.db
+oP1.db
+oP10.db
+oP11.db
+oP12.db
+oP13.db
+oP14.db
+oP15.db
+oP16.db
+oP2.db
+oP3.db
+oP4.db
+oP5.db
+oP6.db
+oP7.db
+oP74.db
+oP75.db
+oP76.db
+oP77.db
+oP78.db
+oP8.db
+oP9.db
+oQ.db
+oQ2.db
+oR.db
+oR1.db
+oR10.db
+oR11.db
+oR12.db
+oR13.db
+oR14.db
+oR15.db
+oR16.db
+oR17.db
+oR18.db
+oR19.db
+oR2.db
+oR20.db
+oR3.db
+oR4.db
+oR5.db
+oR6.db
+oR7.db
+oR8.db
+oR9.db
+oS.db
+oT.db
+oU.db
+oW.db
+oX.db
+oY.db
+oZ.db
+oc1.db
+ocd.db
+om1.db
+om2.db
+prod40.db
+proda.db
+s13a.db
+s13c.db
+s14.db
+s15.db
+s16.db
+s17.db
+s18.db
+s19.db
+s20.db
+s20b.db
+s21.db
+s21b.db
+s21d.db
+s22.db
+s22c.db
+s22d.db
+s22e.db
+s22f.db
+s22g.db
+s22h.db
+s22i.db
+scanS108.db
+scanS110.db
+scanS118.db
+scanS120.db
+scanS128.db
+scanS130.db
+scanS138.db
+scanS140.db
+scanS148.db
+scanS150.db
+scanS158.db
+scanS160.db
+scanS168.db
+scanS170.db
+scanS178.db
+scanS180.db
+scanS188.db
+scanS190.db
+scanS28.db
+scanS30.db
+scanS38.db
+scanS40.db
+scanS48.db
+scanS50.db
+scanS58.db
+scanS60.db
+scanS68.db
+scanS70.db
+scanS78.db
+scanS80.db
+scanS88.db
+scanS90.db
+scanS98.db
+scanSa0.db
+scanSa8.db
+scanSb0.db
+scanSb8.db
+scanSc0.db
+scanSc8.db
+scanSd0.db
+scanSd8.db
+scan_11.db
+scan_12.db
+scan_14.db
+v3_10.db
+v3_11.db
+v3_13.db
+--- A2 c_line 大件 ---
+116K	analysis/output/c_line/C-line-findings-2026-10-04.md
+16M	analysis/output/c_line/cust.raw
+16K	analysis/output/c_line/extract
+11G	analysis/output/c_line/image
+4.0M	analysis/output/c_line/init_bin
+2.0G	analysis/output/c_line/odm.raw
+6.0K	analysis/output/c_line/odm_extract
+92K	analysis/output/c_line/odm_honor.txt
+128M	analysis/output/c_line/patch_avb.raw
+416M	analysis/output/c_line/preas.raw
+1.0K	analysis/output/c_line/preas_honor.txt
+3.8G	analysis/output/c_line/product_h.raw
+8.0K	analysis/output/c_line/product_h_honor.txt
+164K	analysis/output/c_line/risk_sx
+7.1M	analysis/output/c_line/risk_system
+2.0K	analysis/output/c_line/risk_vendor
+6.8M	analysis/output/c_line/sepolicy
+72K	analysis/output/c_line/sx_extract
+4.1G	analysis/output/c_line/system.raw
+32M	analysis/output/c_line/system_dlkm.raw
+128M	analysis/output/c_line/system_ext.raw
+4.0K	analysis/output/c_line/system_ext_honor.txt
+28K	analysis/output/c_line/system_honor.txt
+8.7G	analysis/output/c_line/update_sd_base.zip
+192K	analysis/output/c_line/update_sd_cust_MEY-AN00_all_cn.zip
+2.0G	analysis/output/c_line/update_sd_preload_MEY-AN00_all_cn_R404.zip
+1.2G	analysis/output/c_line/vendor.raw
+96M	analysis/output/c_line/vendor_dlkm.raw
+168K	analysis/output/c_line/vendor_honor2.txt
+4.0K	analysis/output/c_line/vendor_honor3.txt
+128K	analysis/output/c_line/vendor_honor_list.txt
+--- A3 output 大日志 ---
+-rw-r--r-- 1 RH 197121       319 Oct  2 22:03 analysis/output/campaign61.log
+-rw-r--r-- 1 RH 197121     13730 Oct  3 00:33 analysis/output/campaign62.log
+-rw-r--r-- 1 RH 197121     77747 Oct  3 17:54 analysis/output/campaign63.log
+-rw-r--r-- 1 RH 197121     20497 Sep 29 15:17 analysis/output/cp11.log
+-rw-r--r-- 1 RH 197121      1137 Sep 29 15:55 analysis/output/cp12.log
+-rw-r--r-- 1 RH 197121      1037 Sep 29 16:33 analysis/output/cp13.log
+-rw-r--r-- 1 RH 197121      1549 Sep 29 16:41 analysis/output/cp14.log
+-rw-r--r-- 1 RH 197121      9787 Sep 29 16:47 analysis/output/cp15.log
+-rw-r--r-- 1 RH 197121      1259 Sep 29 17:00 analysis/output/cp16.log
+-rw-r--r-- 1 RH 197121      1439 Sep 29 17:04 analysis/output/cp17.log
+-rw-r--r-- 1 RH 197121      1309 Sep 29 17:52 analysis/output/cp18.log
+-rw-r--r-- 1 RH 197121      1156 Sep 29 18:19 analysis/output/cp20.log
+-rw-r--r-- 1 RH 197121      3371 Sep 29 19:00 analysis/output/cp22.log
+-rw-r--r-- 1 RH 197121      1500 Sep 29 20:48 analysis/output/cp23.log
+-rw-r--r-- 1 RH 197121    269395 Sep 29 15:17 analysis/output/e11.log
+-rw-r--r-- 1 RH 197121      6032 Sep 29 15:55 analysis/output/e12.log
+-rw-r--r-- 1 RH 197121      3445 Sep 30 00:16 analysis/output/e35_cp.log
+-rw-r--r-- 1 RH 197121         0 Sep 30 07:29 analysis/output/e36b_cp.log
+-rw-r--r-- 1 RH 197121         0 Sep 30 07:33 analysis/output/e37_cp_live.log
+-rw-r--r-- 1 RH 197121      7862 Sep 30 07:36 analysis/output/e37b_live.log
+-rw-r--r-- 1 RH 197121         0 Sep 30 08:18 analysis/output/e38_live.log
+-rw-r--r-- 1 RH 197121       173 Sep 30 08:23 analysis/output/e38b_live.log
+-rw-r--r-- 1 RH 197121      5412 Sep 30 08:28 analysis/output/e39_cp.log
+-rw-r--r-- 1 RH 197121      5711 Sep 30 08:28 analysis/output/e39_live.log
+-rw-r--r-- 1 RH 197121     69094 Sep 30 08:28 analysis/output/e39_stdout.log
+-rw-r--r-- 1 RH 197121      1703 Sep 30 08:43 analysis/output/e41_cp.log
+-rw-r--r-- 1 RH 197121      1703 Sep 30 08:48 analysis/output/e42_cp.log
+-rw-r--r-- 1 RH 197121      1751 Sep 30 08:52 analysis/output/e43_cp.log
+-rw-r--r-- 1 RH 197121      1696 Sep 30 08:56 analysis/output/e44_cp.log
+-rw-r--r-- 1 RH 197121      1703 Sep 30 08:59 analysis/output/e45_cp.log
+-rw-r--r-- 1 RH 197121     10573 Sep 30 09:10 analysis/output/e46_cp.log
+-rw-r--r-- 1 RH 197121    106462 Sep 30 09:10 analysis/output/e46_stdout.log
+-rw-r--r-- 1 RH 197121      7994 Sep 30 09:15 analysis/output/e47_cp.log
+-rw-r--r-- 1 RH 197121     86996 Sep 30 09:15 analysis/output/e47_stdout.log
+-rw-r--r-- 1 RH 197121      1757 Sep 30 09:20 analysis/output/e48_cp.log
+-rw-r--r-- 1 RH 197121     17830 Sep 30 09:28 analysis/output/e49_stdout.log
+-rw-r--r-- 1 RH 197121      1804 Sep 30 09:35 analysis/output/e50_cp.log
+-rw-r--r-- 1 RH 197121       244 Sep 30 09:35 analysis/output/e50_stdout.log
+-rw-r--r-- 1 RH 197121      1776 Sep 30 09:44 analysis/output/e51_cp.log
+-rw-r--r-- 1 RH 197121      5352 Sep 30 09:44 analysis/output/e51_stdout.log
+-rw-r--r-- 1 RH 197121      1910 Sep 30 09:53 analysis/output/e52_cp.log
+-rw-r--r-- 1 RH 197121      1960 Sep 30 10:01 analysis/output/e53_cp.log
+-rw-r--r-- 1 RH 197121      8270 Sep 30 10:01 analysis/output/e53_stdout.log
+-rw-r--r-- 1 RH 197121      3546 Sep 30 10:35 analysis/output/e57_cp.log
+-rw-r--r-- 1 RH 197121      4416 Sep 30 10:46 analysis/output/e59_cp.log
+-rw-r--r-- 1 RH 197121      2675 Sep 30 11:02 analysis/output/e60_cp_round2.log
+-rw-r--r-- 1 RH 197121     10093 Sep 30 13:08 analysis/output/e70_cp.log
+-rw-r--r-- 1 RH 197121    159184 Sep 30 14:16 analysis/output/e71_cp.log
+-rw-r--r-- 1 RH 197121      2784 Sep 30 14:22 analysis/output/e72_cp.log
+-rw-r--r-- 1 RH 197121      2515 Sep 30 14:26 analysis/output/e73_cp.log
+-rw-r--r-- 1 RH 197121      4776 Sep 30 14:29 analysis/output/e74_cp.log
+-rw-r--r-- 1 RH 197121      3914 Sep 30 14:32 analysis/output/e75_cp.log
+-rw-r--r-- 1 RH 197121      5099 Sep 30 15:02 analysis/output/e76_cp.log
+-rw-r--r-- 1 RH 197121      6699 Sep 30 15:07 analysis/output/e77_cp.log
+-rw-r--r-- 1 RH 197121      2036 Sep 30 15:21 analysis/output/e80_cp.log
+-rw-r--r-- 1 RH 197121      3396 Sep 30 15:26 analysis/output/e81_cp.log
+-rw-r--r-- 1 RH 197121      3366 Sep 30 15:30 analysis/output/e82_cp.log
+-rw-r--r-- 1 RH 197121      3576 Sep 30 15:34 analysis/output/e83_cp.log
+-rw-r--r-- 1 RH 197121        95 Oct  1 00:44 analysis/output/fireA_driver.log
+-rw-r--r-- 1 RH 197121      1821 Oct  1 00:46 analysis/output/fireA_r1.log
+-rw-r--r-- 1 RH 197121        57 Oct  1 00:49 analysis/output/fireB_driver.log
+-rw-r--r-- 1 RH 197121      1481 Oct  1 01:01 analysis/output/fireB_r1.log
+-rw-r--r-- 1 RH 197121    682736 Oct  5 18:29 analysis/output/h163b_r5_h50geom.log
+-rw-r--r-- 1 RH 197121      5444 Oct  6 04:17 analysis/output/h184_run_probe.log
+-rw-r--r-- 1 RH 197121      4270 Oct  4 16:22 analysis/output/h42_trace.log
+-rw-r--r-- 1 RH 197121       107 Oct  4 16:27 analysis/output/h43_traceon.log
+-rw-r--r-- 1 RH 197121       107 Oct  4 17:03 analysis/output/h49_sweep.log
+-rw-r--r-- 1 RH 197121       100 Oct  4 17:01 analysis/output/h49_sweep_raw.log
+-rw-r--r-- 1 RH 197121    175501 Oct  4 17:22 analysis/output/h50_live_hit.log
+-rw-r--r-- 1 RH 197121         0 Oct  4 17:29 analysis/output/h52_extract.log
+-rw-r--r-- 1 RH 197121    255195 Oct  4 19:01 analysis/output/h71_run.log
+-rw-r--r-- 1 RH 197121    198570 Oct  4 19:07 analysis/output/h72_a.log
+-rw-r--r-- 1 RH 197121     50883 Oct  4 19:38 analysis/output/h74_a.log
+-rw-r--r-- 1 RH 197121 694660310 Oct  4 19:45 analysis/output/h74_b.log
+-rw-r--r-- 1 RH 197121     70213 Sep 30 08:09 analysis/output/ks_test.log
+-rw-r--r-- 1 RH 197121    112231 Sep 30 08:16 analysis/output/ks_test32.log
+-rw-r--r-- 1 RH 197121      5796 Oct  4 15:59 analysis/output/l2_e39.log
+-rw-r--r-- 1 RH 197121      8245 Oct  4 15:52 analysis/output/l2_run1.log
+-rw-r--r-- 1 RH 197121      5497 Oct  4 15:55 analysis/output/l2_run2.log
+-rw-r--r-- 1 RH 197121         0 Oct  1 01:08 analysis/output/land.log
+-rw-r--r-- 1 RH 197121     59944 Oct  1 14:40 analysis/output/live_fd_history.log
+-rw-r--r-- 1 RH 197121 141574144 Oct  1 11:03 analysis/output/log_can.db
+-rw-r--r-- 1 RH 197121 141279232 Oct  1 00:45 analysis/output/log_fireA_1.db
+-rw-r--r-- 1 RH 197121 141316096 Oct  1 01:02 analysis/output/log_fireB_1.db
+-rw-r--r-- 1 RH 197121 141320192 Oct  1 01:04 analysis/output/log_fireB_2.db
+-rw-r--r-- 1 RH 197121 141590528 Oct  1 11:54 analysis/output/log_latest.db
+-rw-r--r-- 1 RH 197121 141602816 Oct  1 12:18 analysis/output/log_live.db
+-rw-r--r-- 1 RH 197121 141602816 Oct  1 12:32 analysis/output/log_live2.db
+-rw-r--r-- 1 RH 197121 141643776 Oct  1 13:24 analysis/output/log_oH_oI.db
+-rw-r--r-- 1 RH 197121 141185024 Sep 30 23:58 analysis/output/log_om8b.db
+-rw-r--r-- 1 RH 197121 141148160 Sep 30 23:02 analysis/output/log_otest.db
+-rw-r--r-- 1 RH 197121 141447168 Oct  1 07:12 analysis/output/log_s0.db
+-rw-r--r-- 1 RH 197121 141574144 Oct  1 11:14 analysis/output/log_v.db
+-rw-r--r-- 1 RH 197121      2092 Sep 30 23:45 analysis/output/o0_cp.log
+-rw-r--r-- 1 RH 197121      2364 Oct  1 12:05 analysis/output/o10_cp.log
+-rw-r--r-- 1 RH 197121     55378 Oct  1 12:05 analysis/output/o10_faultdetect.log
+-rw-r--r-- 1 RH 197121      2704 Sep 30 23:45 analysis/output/o12_cp.log
+-rw-r--r-- 1 RH 197121      1903 Sep 30 23:48 analysis/output/o14_cp.log
+-rw-r--r-- 1 RH 197121      8307 Sep 30 23:53 analysis/output/o16_cp.log
+-rw-r--r-- 1 RH 197121      1574 Sep 30 23:58 analysis/output/o18_cp.log
+-rw-r--r-- 1 RH 197121      1698 Oct  1 00:01 analysis/output/o20_cp.log
+-rw-r--r-- 1 RH 197121      2572 Sep 30 23:45 analysis/output/o2_cp.log
+-rw-r--r-- 1 RH 197121      3343 Sep 30 23:33 analysis/output/o4_cp.log
+-rw-r--r-- 1 RH 197121      2485 Sep 30 23:36 analysis/output/o6_cp.log
+-rw-r--r-- 1 RH 197121      1937 Sep 30 23:39 analysis/output/o8_cp.log
+-rw-r--r-- 1 RH 197121     23241 Oct  1 16:26 analysis/output/oAA_cp.log
+-rw-r--r-- 1 RH 197121     60234 Oct  1 16:19 analysis/output/oAA_faultdetect.log
+-rw-r--r-- 1 RH 197121      2734 Oct  1 16:36 analysis/output/oAB_cp.log
+-rw-r--r-- 1 RH 197121     60379 Oct  1 16:36 analysis/output/oAB_faultdetect.log
+-rw-r--r-- 1 RH 197121      2734 Oct  1 16:41 analysis/output/oAC_cp.log
+-rw-r--r-- 1 RH 197121     60524 Oct  1 16:41 analysis/output/oAC_faultdetect.log
+-rw-r--r-- 1 RH 197121     67303 Oct  1 16:46 analysis/output/oAD_cp.log
+-rw-r--r-- 1 RH 197121     60524 Oct  1 16:46 analysis/output/oAD_faultdetect.log
+-rw-r--r-- 1 RH 197121     35708 Oct  1 18:33 analysis/output/oAE_cp.log
+-rw-r--r-- 1 RH 197121     60524 Oct  1 18:33 analysis/output/oAE_faultdetect.log
+-rw-r--r-- 1 RH 197121      1481 Oct  1 18:36 analysis/output/oAF_cp.log
+-rw-r--r-- 1 RH 197121     60669 Oct  1 18:37 analysis/output/oAF_faultdetect.log
+-rw-r--r-- 1 RH 197121      1491 Oct  1 18:40 analysis/output/oAG_cp.log
+-rw-r--r-- 1 RH 197121     60814 Oct  1 18:40 analysis/output/oAG_faultdetect.log
+-rw-r--r-- 1 RH 197121      1490 Oct  1 18:42 analysis/output/oAH_cp.log
+-rw-r--r-- 1 RH 197121     60959 Oct  1 18:42 analysis/output/oAH_faultdetect.log
+-rw-r--r-- 1 RH 197121      1481 Oct  1 18:46 analysis/output/oAI_cp.log
+-rw-r--r-- 1 RH 197121     61104 Oct  1 18:46 analysis/output/oAI_faultdetect.log
+-rw-r--r-- 1 RH 197121    103291 Oct  1 18:53 analysis/output/oAJ_cp.log
+-rw-r--r-- 1 RH 197121     61104 Oct  1 18:53 analysis/output/oAJ_faultdetect.log
+-rw-r--r-- 1 RH 197121      2968 Oct  1 18:56 analysis/output/oAK_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 18:56 analysis/output/oAK_faultdetect.log
+-rw-r--r-- 1 RH 197121     91589 Oct  1 19:00 analysis/output/oAL_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 19:01 analysis/output/oAL_faultdetect.log
+-rw-r--r-- 1 RH 197121    106839 Oct  1 19:05 analysis/output/oAM_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 19:05 analysis/output/oAM_faultdetect.log
+-rw-r--r-- 1 RH 197121    103340 Oct  1 19:10 analysis/output/oAN_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 19:10 analysis/output/oAN_faultdetect.log
+-rw-r--r-- 1 RH 197121    103135 Oct  1 19:14 analysis/output/oAO_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 19:14 analysis/output/oAO_faultdetect.log
+-rw-r--r-- 1 RH 197121     98307 Oct  1 19:19 analysis/output/oAP_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 19:20 analysis/output/oAP_faultdetect.log
+-rw-r--r-- 1 RH 197121    101155 Oct  1 19:24 analysis/output/oAQ_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 19:24 analysis/output/oAQ_faultdetect.log
+-rw-r--r-- 1 RH 197121    102628 Oct  1 19:30 analysis/output/oAR_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 19:30 analysis/output/oAR_faultdetect.log
+-rw-r--r-- 1 RH 197121    102844 Oct  1 19:34 analysis/output/oAS_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 19:34 analysis/output/oAS_faultdetect.log
+-rw-r--r-- 1 RH 197121    110410 Oct  1 19:39 analysis/output/oAT_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 19:40 analysis/output/oAT_faultdetect.log
+-rw-r--r-- 1 RH 197121     99574 Oct  1 19:46 analysis/output/oAU_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 19:46 analysis/output/oAU_faultdetect.log
+-rw-r--r-- 1 RH 197121    100196 Oct  1 19:51 analysis/output/oAV_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 19:51 analysis/output/oAV_faultdetect.log
+-rw-r--r-- 1 RH 197121     65614 Oct  1 19:55 analysis/output/oAW_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 19:56 analysis/output/oAW_faultdetect.log
+-rw-r--r-- 1 RH 197121     40974 Oct  1 20:12 analysis/output/oAX_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 20:13 analysis/output/oAX_faultdetect.log
+-rw-r--r-- 1 RH 197121     30165 Oct  1 21:02 analysis/output/oAY_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:02 analysis/output/oAY_faultdetect.log
+-rw-r--r-- 1 RH 197121     30162 Oct  1 21:04 analysis/output/oAZ_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:04 analysis/output/oAZ_faultdetect.log
+-rw-r--r-- 1 RH 197121      2935 Oct  1 12:25 analysis/output/oA_cp.log
+-rw-r--r-- 1 RH 197121     56103 Oct  1 12:25 analysis/output/oA_faultdetect.log
+-rw-r--r-- 1 RH 197121     32174 Oct  1 21:09 analysis/output/oBB_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:09 analysis/output/oBB_faultdetect.log
+-rw-r--r-- 1 RH 197121     32363 Oct  1 21:11 analysis/output/oBC_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:11 analysis/output/oBC_faultdetect.log
+-rw-r--r-- 1 RH 197121     24856 Oct  1 21:14 analysis/output/oBD_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:14 analysis/output/oBD_faultdetect.log
+-rw-r--r-- 1 RH 197121     30540 Oct  1 22:25 analysis/output/oBE_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 22:25 analysis/output/oBE_faultdetect.log
+-rw-r--r-- 1 RH 197121         0 Oct  1 22:39 analysis/output/oBF2_cp.log
+-rw-r--r-- 1 RH 197121         0 Oct  1 22:39 analysis/output/oBF2_faultdetect.log
+-rw-r--r-- 1 RH 197121         0 Oct  1 22:36 analysis/output/oBF_cp.log
+-rw-r--r-- 1 RH 197121         0 Oct  1 22:36 analysis/output/oBF_faultdetect.log
+-rw-r--r-- 1 RH 197121         0 Oct  1 22:48 analysis/output/oBG_cp.log
+-rw-r--r-- 1 RH 197121     61829 Oct  1 22:49 analysis/output/oBG_faultdetect.log
+-rw-r--r-- 1 RH 197121         0 Oct  1 22:56 analysis/output/oBH_cp.log
+-rw-r--r-- 1 RH 197121         0 Oct  1 22:56 analysis/output/oBH_faultdetect.log
+-rw-r--r-- 1 RH 197121      1458 Oct  1 23:05 analysis/output/oBI_cp.log
+-rw-r--r-- 1 RH 197121     62119 Oct  1 23:05 analysis/output/oBI_faultdetect.log
+-rw-r--r-- 1 RH 197121      1457 Oct  2 01:55 analysis/output/oBK_cp.log
+-rw-r--r-- 1 RH 197121     71424 Oct  2 01:56 analysis/output/oBK_faultdetect.log
+-rw-r--r-- 1 RH 197121      1457 Oct  2 02:06 analysis/output/oBL_cp.log
+-rw-r--r-- 1 RH 197121     71709 Oct  2 02:06 analysis/output/oBL_faultdetect.log
+-rw-r--r-- 1 RH 197121      1457 Oct  2 02:11 analysis/output/oBM_cp.log
+-rw-r--r-- 1 RH 197121     71994 Oct  2 02:11 analysis/output/oBM_faultdetect.log
+-rw-r--r-- 1 RH 197121      1467 Oct  2 02:18 analysis/output/oBN_cp.log
+-rw-r--r-- 1 RH 197121     72279 Oct  2 02:18 analysis/output/oBN_faultdetect.log
+-rw-r--r-- 1 RH 197121      1457 Oct  2 02:21 analysis/output/oBP_cp.log
+-rw-r--r-- 1 RH 197121     72424 Oct  2 02:21 analysis/output/oBP_faultdetect.log
+-rw-r--r-- 1 RH 197121      1457 Oct  2 02:44 analysis/output/oBQ_cp.log
+-rw-r--r-- 1 RH 197121     72569 Oct  2 02:44 analysis/output/oBQ_faultdetect.log
+-rw-r--r-- 1 RH 197121      1458 Oct  2 02:47 analysis/output/oBR_cp.log
+-rw-r--r-- 1 RH 197121     72714 Oct  2 02:47 analysis/output/oBR_faultdetect.log
+-rw-r--r-- 1 RH 197121      1507 Oct  2 02:58 analysis/output/oBS_cp.log
+-rw-r--r-- 1 RH 197121     73149 Oct  2 02:58 analysis/output/oBS_faultdetect.log
+-rw-r--r-- 1 RH 197121      1550 Oct  2 03:01 analysis/output/oBT_cp.log
+-rw-r--r-- 1 RH 197121     73294 Oct  2 03:01 analysis/output/oBT_faultdetect.log
+-rw-r--r-- 1 RH 197121      6139 Oct  2 03:05 analysis/output/oBU_cp.log
+-rw-r--r-- 1 RH 197121     73294 Oct  2 03:05 analysis/output/oBU_faultdetect.log
+-rw-r--r-- 1 RH 197121      1575 Oct  2 03:09 analysis/output/oBV_cp.log
+-rw-r--r-- 1 RH 197121     73439 Oct  2 03:09 analysis/output/oBV_faultdetect.log
+-rw-r--r-- 1 RH 197121      1575 Oct  2 03:22 analysis/output/oBW_cp.log
+-rw-r--r-- 1 RH 197121     73584 Oct  2 03:22 analysis/output/oBW_faultdetect.log
+-rw-r--r-- 1 RH 197121      1575 Oct  2 03:25 analysis/output/oBX_cp.log
+-rw-r--r-- 1 RH 197121     73729 Oct  2 03:26 analysis/output/oBX_faultdetect.log
+-rw-r--r-- 1 RH 197121      1575 Oct  2 03:28 analysis/output/oBY_cp.log
+-rw-r--r-- 1 RH 197121     73874 Oct  2 03:28 analysis/output/oBY_faultdetect.log
+-rw-r--r-- 1 RH 197121      4673 Oct  2 07:01 analysis/output/oBZ_cp.log
+-rw-r--r-- 1 RH 197121     84994 Oct  2 07:01 analysis/output/oBZ_faultdetect.log
+-rw-r--r-- 1 RH 197121     21347 Oct  1 12:31 analysis/output/oB_cp.log
+-rw-r--r-- 1 RH 197121     56103 Oct  1 12:31 analysis/output/oB_faultdetect.log
+-rw-r--r-- 1 RH 197121      1595 Oct  2 03:34 analysis/output/oC0_cp.log
+-rw-r--r-- 1 RH 197121     74019 Oct  2 03:35 analysis/output/oC0_faultdetect.log
+-rw-r--r-- 1 RH 197121       765 Oct  2 03:48 analysis/output/oC2_cp.log
+-rw-r--r-- 1 RH 197121     74164 Oct  2 03:48 analysis/output/oC2_faultdetect.log
+-rw-r--r-- 1 RH 197121      4643 Oct  2 07:06 analysis/output/oC4_cp.log
+-rw-r--r-- 1 RH 197121     85139 Oct  2 07:06 analysis/output/oC4_faultdetect.log
+-rw-r--r-- 1 RH 197121      1576 Oct  2 07:32 analysis/output/oC6_cp.log
+-rw-r--r-- 1 RH 197121     85429 Oct  2 07:33 analysis/output/oC6_faultdetect.log
+-rw-r--r-- 1 RH 197121      1606 Oct  2 08:08 analysis/output/oC8_cp.log
+-rw-r--r-- 1 RH 197121     87714 Oct  2 08:09 analysis/output/oC8_faultdetect.log
+-rw-r--r-- 1 RH 197121      1504 Oct  2 08:24 analysis/output/oC9_cp.log
+-rw-r--r-- 1 RH 197121     88144 Oct  2 08:24 analysis/output/oC9_faultdetect.log
+-rw-r--r-- 1 RH 197121      7302 Oct  1 12:37 analysis/output/oC_cp.log
+-rw-r--r-- 1 RH 197121     56103 Oct  1 12:37 analysis/output/oC_faultdetect.log
+-rw-r--r-- 1 RH 197121      1357 Oct  2 08:28 analysis/output/oD0_cp.log
+-rw-r--r-- 1 RH 197121     88289 Oct  2 08:28 analysis/output/oD0_faultdetect.log
+-rw-r--r-- 1 RH 197121      1524 Oct  2 09:48 analysis/output/oD1_cp.log
+-rw-r--r-- 1 RH 197121     92709 Oct  2 09:48 analysis/output/oD1_faultdetect.log
+-rw-r--r-- 1 RH 197121      1519 Oct  2 09:50 analysis/output/oD2_cp.log
+-rw-r--r-- 1 RH 197121     92854 Oct  2 09:50 analysis/output/oD2_faultdetect.log
+-rw-r--r-- 1 RH 197121       857 Oct  2 14:36 analysis/output/oD3_cp.log
+-rw-r--r-- 1 RH 197121    103189 Oct  2 14:36 analysis/output/oD3_faultdetect.log
+-rw-r--r-- 1 RH 197121      1097 Oct  2 14:44 analysis/output/oD4_cp.log
+-rw-r--r-- 1 RH 197121    103624 Oct  2 14:44 analysis/output/oD4_faultdetect.log
+-rw-r--r-- 1 RH 197121      3074 Oct  1 12:45 analysis/output/oD_cp.log
+-rw-r--r-- 1 RH 197121     56388 Oct  1 12:45 analysis/output/oD_faultdetect.log
+-rw-r--r-- 1 RH 197121      1392 Oct  2 11:01 analysis/output/oE10_cp.log
+-rw-r--r-- 1 RH 197121     93724 Oct  2 11:01 analysis/output/oE10_faultdetect.log
+-rw-r--r-- 1 RH 197121      1436 Oct  2 11:04 analysis/output/oE11_cp.log
+-rw-r--r-- 1 RH 197121     93869 Oct  2 11:04 analysis/output/oE11_faultdetect.log
+-rw-r--r-- 1 RH 197121     75457 Oct  2 11:09 analysis/output/oE12_cp.log
+-rw-r--r-- 1 RH 197121     93869 Oct  2 11:09 analysis/output/oE12_faultdetect.log
+-rw-r--r-- 1 RH 197121    191717 Oct  2 11:21 analysis/output/oE13_cp.log
+-rw-r--r-- 1 RH 197121     93869 Oct  2 11:21 analysis/output/oE13_faultdetect.log
+-rw-r--r-- 1 RH 197121    188164 Oct  2 11:25 analysis/output/oE14_cp.log
+-rw-r--r-- 1 RH 197121     93869 Oct  2 11:25 analysis/output/oE14_faultdetect.log
+-rw-r--r-- 1 RH 197121      3701 Oct  2 11:52 analysis/output/oE15_cp.log
+-rw-r--r-- 1 RH 197121     94014 Oct  2 11:52 analysis/output/oE15_faultdetect.log
+-rw-r--r-- 1 RH 197121      3701 Oct  2 11:54 analysis/output/oE16_cp.log
+-rw-r--r-- 1 RH 197121     94159 Oct  2 11:54 analysis/output/oE16_faultdetect.log
+-rw-r--r-- 1 RH 197121      3701 Oct  2 11:57 analysis/output/oE17_cp.log
+-rw-r--r-- 1 RH 197121     94304 Oct  2 11:57 analysis/output/oE17_faultdetect.log
+-rw-r--r-- 1 RH 197121      3813 Oct  2 12:00 analysis/output/oE18_cp.log
+-rw-r--r-- 1 RH 197121     94449 Oct  2 12:00 analysis/output/oE18_faultdetect.log
+-rw-r--r-- 1 RH 197121      1483 Oct  2 12:02 analysis/output/oE19_cp.log
+-rw-r--r-- 1 RH 197121     94594 Oct  2 12:02 analysis/output/oE19_faultdetect.log
+-rw-r--r-- 1 RH 197121      1513 Oct  2 10:12 analysis/output/oE1_cp.log
+-rw-r--r-- 1 RH 197121     93144 Oct  2 10:12 analysis/output/oE1_faultdetect.log
+-rw-r--r-- 1 RH 197121      1493 Oct  2 12:05 analysis/output/oE20_cp.log
+-rw-r--r-- 1 RH 197121     94739 Oct  2 12:05 analysis/output/oE20_faultdetect.log
+-rw-r--r-- 1 RH 197121      1469 Oct  2 12:07 analysis/output/oE21_cp.log
+-rw-r--r-- 1 RH 197121     94884 Oct  2 12:08 analysis/output/oE21_faultdetect.log
+-rw-r--r-- 1 RH 197121      1443 Oct  2 12:10 analysis/output/oE22_cp.log
+-rw-r--r-- 1 RH 197121     95029 Oct  2 12:10 analysis/output/oE22_faultdetect.log
+-rw-r--r-- 1 RH 197121      2050 Oct  2 12:13 analysis/output/oE23_cp.log
+-rw-r--r-- 1 RH 197121     95174 Oct  2 12:13 analysis/output/oE23_faultdetect.log
+-rw-r--r-- 1 RH 197121      2097 Oct  2 12:15 analysis/output/oE24_cp.log
+-rw-r--r-- 1 RH 197121     95319 Oct  2 12:15 analysis/output/oE24_faultdetect.log
+-rw-r--r-- 1 RH 197121      2050 Oct  2 12:18 analysis/output/oE25_cp.log
+-rw-r--r-- 1 RH 197121     95464 Oct  2 12:18 analysis/output/oE25_faultdetect.log
+-rw-r--r-- 1 RH 197121      1396 Oct  2 12:20 analysis/output/oE26_cp.log
+-rw-r--r-- 1 RH 197121     95609 Oct  2 12:21 analysis/output/oE26_faultdetect.log
+-rw-r--r-- 1 RH 197121      1386 Oct  2 12:34 analysis/output/oE27_cp.log
+-rw-r--r-- 1 RH 197121     95894 Oct  2 12:34 analysis/output/oE27_faultdetect.log
+-rw-r--r-- 1 RH 197121      3721 Oct  2 12:36 analysis/output/oE28_cp.log
+-rw-r--r-- 1 RH 197121     96039 Oct  2 12:37 analysis/output/oE28_faultdetect.log
+-rw-r--r-- 1 RH 197121      1396 Oct  2 12:39 analysis/output/oE29_cp.log
+-rw-r--r-- 1 RH 197121     96184 Oct  2 12:39 analysis/output/oE29_faultdetect.log
+-rw-r--r-- 1 RH 197121     68121 Oct  2 10:18 analysis/output/oE2_cp.log
+-rw-r--r-- 1 RH 197121     93144 Oct  2 10:18 analysis/output/oE2_faultdetect.log
+-rw-r--r-- 1 RH 197121      1406 Oct  2 12:42 analysis/output/oE30_cp.log
+-rw-r--r-- 1 RH 197121     96329 Oct  2 12:42 analysis/output/oE30_faultdetect.log
+-rw-r--r-- 1 RH 197121      2050 Oct  2 12:45 analysis/output/oE31_cp.log
+-rw-r--r-- 1 RH 197121     96474 Oct  2 12:45 analysis/output/oE31_faultdetect.log
+-rw-r--r-- 1 RH 197121      2050 Oct  2 12:47 analysis/output/oE32_cp.log
+-rw-r--r-- 1 RH 197121     96619 Oct  2 12:48 analysis/output/oE32_faultdetect.log
+-rw-r--r-- 1 RH 197121      3711 Oct  2 12:50 analysis/output/oE33_cp.log
+-rw-r--r-- 1 RH 197121     96764 Oct  2 12:50 analysis/output/oE33_faultdetect.log
+-rw-r--r-- 1 RH 197121      1416 Oct  2 14:25 analysis/output/oE35_cp.log
+-rw-r--r-- 1 RH 197121    102609 Oct  2 14:25 analysis/output/oE35_faultdetect.log
+-rw-r--r-- 1 RH 197121      1416 Oct  2 14:27 analysis/output/oE36_2_cp.log
+-rw-r--r-- 1 RH 197121    102754 Oct  2 14:28 analysis/output/oE36_2_faultdetect.log
+-rw-r--r-- 1 RH 197121      1436 Oct  2 14:30 analysis/output/oE36_4_cp.log
+-rw-r--r-- 1 RH 197121    102899 Oct  2 14:30 analysis/output/oE36_4_faultdetect.log
+-rw-r--r-- 1 RH 197121      3731 Oct  2 14:33 analysis/output/oE37_cp.log
+-rw-r--r-- 1 RH 197121    103044 Oct  2 14:33 analysis/output/oE37_faultdetect.log
+-rw-r--r-- 1 RH 197121      1436 Oct  2 14:38 analysis/output/oE38_cp.log
+-rw-r--r-- 1 RH 197121    103334 Oct  2 14:39 analysis/output/oE38_faultdetect.log
+-rw-r--r-- 1 RH 197121      1446 Oct  2 14:41 analysis/output/oE39_cp.log
+-rw-r--r-- 1 RH 197121    103479 Oct  2 14:41 analysis/output/oE39_faultdetect.log
+-rw-r--r-- 1 RH 197121      1586 Oct  2 08:22 analysis/output/oE39b_cp.log
+-rw-r--r-- 1 RH 197121     87999 Oct  2 08:22 analysis/output/oE39b_faultdetect.log
+-rw-r--r-- 1 RH 197121     65936 Oct  2 10:22 analysis/output/oE3_cp.log
+-rw-r--r-- 1 RH 197121     93144 Oct  2 10:23 analysis/output/oE3_faultdetect.log
+-rw-r--r-- 1 RH 197121      1426 Oct  2 14:47 analysis/output/oE40_cp.log
+-rw-r--r-- 1 RH 197121    103769 Oct  2 14:47 analysis/output/oE40_faultdetect.log
+-rw-r--r-- 1 RH 197121     67070 Oct  2 10:28 analysis/output/oE4_cp.log
+-rw-r--r-- 1 RH 197121     93144 Oct  2 10:28 analysis/output/oE4_faultdetect.log
+-rw-r--r-- 1 RH 197121     66616 Oct  2 10:33 analysis/output/oE5_cp.log
+-rw-r--r-- 1 RH 197121     93144 Oct  2 10:33 analysis/output/oE5_faultdetect.log
+-rw-r--r-- 1 RH 197121     66585 Oct  2 10:50 analysis/output/oE6_cp.log
+-rw-r--r-- 1 RH 197121     93144 Oct  2 10:50 analysis/output/oE6_faultdetect.log
+-rw-r--r-- 1 RH 197121      1386 Oct  2 10:53 analysis/output/oE7_cp.log
+-rw-r--r-- 1 RH 197121     93289 Oct  2 10:53 analysis/output/oE7_faultdetect.log
+-rw-r--r-- 1 RH 197121      1376 Oct  2 10:56 analysis/output/oE8_cp.log
+-rw-r--r-- 1 RH 197121     93434 Oct  2 10:56 analysis/output/oE8_faultdetect.log
+-rw-r--r-- 1 RH 197121      1376 Oct  2 10:58 analysis/output/oE9_cp.log
+-rw-r--r-- 1 RH 197121     93579 Oct  2 10:59 analysis/output/oE9_faultdetect.log
+-rw-r--r-- 1 RH 197121      3785 Oct  1 12:52 analysis/output/oE_cp.log
+-rw-r--r-- 1 RH 197121     56673 Oct  1 12:52 analysis/output/oE_faultdetect.log
+-rw-r--r-- 1 RH 197121     17061 Oct  2 15:26 analysis/output/oF10_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 15:26 analysis/output/oF10_faultdetect.log
+-rw-r--r-- 1 RH 197121     33537 Oct  2 15:30 analysis/output/oF11_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 15:30 analysis/output/oF11_faultdetect.log
+-rw-r--r-- 1 RH 197121     39104 Oct  2 15:34 analysis/output/oF12_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 15:35 analysis/output/oF12_faultdetect.log
+-rw-r--r-- 1 RH 197121     38693 Oct  2 15:38 analysis/output/oF13_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 15:38 analysis/output/oF13_faultdetect.log
+-rw-r--r-- 1 RH 197121     38321 Oct  2 15:42 analysis/output/oF14_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 15:42 analysis/output/oF14_faultdetect.log
+-rw-r--r-- 1 RH 197121         0 Oct  2 14:53 analysis/output/oF1_cp.log
+-rw-r--r-- 1 RH 197121    103914 Oct  2 14:53 analysis/output/oF1_faultdetect.log
+-rw-r--r-- 1 RH 197121         0 Oct  2 14:55 analysis/output/oF2_cp.log
+-rw-r--r-- 1 RH 197121         0 Oct  2 14:55 analysis/output/oF2_faultdetect.log
+-rw-r--r-- 1 RH 197121      1416 Oct  2 14:58 analysis/output/oF3_cp.log
+-rw-r--r-- 1 RH 197121    104204 Oct  2 14:59 analysis/output/oF3_faultdetect.log
+-rw-r--r-- 1 RH 197121      1419 Oct  2 15:01 analysis/output/oF4_cp.log
+-rw-r--r-- 1 RH 197121    104349 Oct  2 15:01 analysis/output/oF4_faultdetect.log
+-rw-r--r-- 1 RH 197121      1396 Oct  2 15:05 analysis/output/oF5_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 15:05 analysis/output/oF5_faultdetect.log
+-rw-r--r-- 1 RH 197121     23583 Oct  2 15:09 analysis/output/oF6_t1_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 15:09 analysis/output/oF6_t1_faultdetect.log
+-rw-r--r-- 1 RH 197121     27108 Oct  2 15:12 analysis/output/oF6_t2_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 15:12 analysis/output/oF6_t2_faultdetect.log
+-rw-r--r-- 1 RH 197121     28257 Oct  2 15:15 analysis/output/oF7_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 15:15 analysis/output/oF7_faultdetect.log
+-rw-r--r-- 1 RH 197121     32786 Oct  2 15:19 analysis/output/oF8_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 15:19 analysis/output/oF8_faultdetect.log
+-rw-r--r-- 1 RH 197121     33553 Oct  2 15:22 analysis/output/oF9_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 15:22 analysis/output/oF9_faultdetect.log
+-rw-r--r-- 1 RH 197121      6293 Oct  1 13:02 analysis/output/oF_cp.log
+-rw-r--r-- 1 RH 197121     56813 Oct  1 13:02 analysis/output/oF_faultdetect.log
+-rw-r--r-- 1 RH 197121     33374 Oct  2 16:14 analysis/output/oG1_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 16:14 analysis/output/oG1_faultdetect.log
+-rw-r--r-- 1 RH 197121     33077 Oct  2 16:38 analysis/output/oG2_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 16:38 analysis/output/oG2_faultdetect.log
+-rw-r--r-- 1 RH 197121     28907 Oct  2 16:42 analysis/output/oG3_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 16:42 analysis/output/oG3_faultdetect.log
+-rw-r--r-- 1 RH 197121     27572 Oct  2 16:46 analysis/output/oG4_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 16:46 analysis/output/oG4_faultdetect.log
+-rw-r--r-- 1 RH 197121     29243 Oct  2 16:49 analysis/output/oG5_s0_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 16:49 analysis/output/oG5_s0_faultdetect.log
+-rw-r--r-- 1 RH 197121     28862 Oct  2 16:52 analysis/output/oG5_s10_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 16:52 analysis/output/oG5_s10_faultdetect.log
+-rw-r--r-- 1 RH 197121     28864 Oct  2 16:57 analysis/output/oG6_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 16:57 analysis/output/oG6_faultdetect.log
+-rw-r--r-- 1 RH 197121     28878 Oct  2 17:01 analysis/output/oG7_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 17:01 analysis/output/oG7_faultdetect.log
+-rw-r--r-- 1 RH 197121     11990 Oct  2 17:02 analysis/output/oG8_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 17:03 analysis/output/oG8_faultdetect.log
+-rw-r--r-- 1 RH 197121     28860 Oct  2 17:07 analysis/output/oG9_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 17:07 analysis/output/oG9_faultdetect.log
+-rw-r--r-- 1 RH 197121      2755 Oct  1 13:11 analysis/output/oG_cp.log
+-rw-r--r-- 1 RH 197121     57383 Oct  1 13:11 analysis/output/oG_faultdetect.log
+-rw-r--r-- 1 RH 197121     11997 Oct  2 17:08 analysis/output/oH1_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 17:09 analysis/output/oH1_faultdetect.log
+-rw-r--r-- 1 RH 197121     28476 Oct  2 17:12 analysis/output/oH2_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 17:12 analysis/output/oH2_faultdetect.log
+-rw-r--r-- 1 RH 197121     29235 Oct  2 17:16 analysis/output/oH3_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 17:16 analysis/output/oH3_faultdetect.log
+-rw-r--r-- 1 RH 197121     11604 Oct  2 17:18 analysis/output/oH4_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 17:18 analysis/output/oH4_faultdetect.log
+-rw-r--r-- 1 RH 197121     15494 Oct  2 17:20 analysis/output/oH5_1_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 17:21 analysis/output/oH5_1_faultdetect.log
+-rw-r--r-- 1 RH 197121     15494 Oct  2 17:23 analysis/output/oH5_2_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 17:23 analysis/output/oH5_2_faultdetect.log
+-rw-r--r-- 1 RH 197121     15115 Oct  2 17:25 analysis/output/oH5_3_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 17:25 analysis/output/oH5_3_faultdetect.log
+-rw-r--r-- 1 RH 197121     16230 Oct  2 17:28 analysis/output/oH6_1_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 17:28 analysis/output/oH6_1_faultdetect.log
+-rw-r--r-- 1 RH 197121     16213 Oct  2 17:30 analysis/output/oH6_2_cp.log
+-rw-r--r-- 1 RH 197121    104494 Oct  2 17:30 analysis/output/oH6_2_faultdetect.log
+-rw-r--r-- 1 RH 197121      1464 Oct  2 17:32 analysis/output/oH7_cp.log
+-rw-r--r-- 1 RH 197121    104639 Oct  2 17:32 analysis/output/oH7_faultdetect.log
+-rw-r--r-- 1 RH 197121      1444 Oct  2 17:35 analysis/output/oH8_cp.log
+-rw-r--r-- 1 RH 197121    104784 Oct  2 17:35 analysis/output/oH8_faultdetect.log
+-rw-r--r-- 1 RH 197121      1454 Oct  2 17:38 analysis/output/oH9_cp.log
+-rw-r--r-- 1 RH 197121    104929 Oct  2 17:39 analysis/output/oH9_faultdetect.log
+-rw-r--r-- 1 RH 197121      2261 Oct  1 13:17 analysis/output/oH_cp.log
+-rw-r--r-- 1 RH 197121     57659 Oct  1 13:17 analysis/output/oH_faultdetect.log
+-rw-r--r-- 1 RH 197121      8438 Oct  1 13:22 analysis/output/oI_cp.log
+-rw-r--r-- 1 RH 197121     57944 Oct  1 13:23 analysis/output/oI_faultdetect.log
+-rw-r--r-- 1 RH 197121      3382 Oct  1 13:30 analysis/output/oJ_cp.log
+-rw-r--r-- 1 RH 197121     58229 Oct  1 13:30 analysis/output/oJ_faultdetect.log
+-rw-r--r-- 1 RH 197121      1990 Oct  1 13:34 analysis/output/oK_cp.log
+-rw-r--r-- 1 RH 197121     58514 Oct  1 13:35 analysis/output/oK_faultdetect.log
+-rw-r--r-- 1 RH 197121      4211 Oct  1 13:45 analysis/output/oL_cp.log
+-rw-r--r-- 1 RH 197121     59084 Oct  1 13:45 analysis/output/oL_faultdetect.log
+-rw-r--r-- 1 RH 197121      1959 Oct  1 13:49 analysis/output/oM_cp.log
+-rw-r--r-- 1 RH 197121     59369 Oct  1 13:50 analysis/output/oM_faultdetect.log
+-rw-r--r-- 1 RH 197121      1929 Oct  1 13:53 analysis/output/oN_cp.log
+-rw-r--r-- 1 RH 197121     59654 Oct  1 13:54 analysis/output/oN_faultdetect.log
+-rw-r--r-- 1 RH 197121       771 Oct  2 04:00 analysis/output/oP0_cp.log
+-rw-r--r-- 1 RH 197121     74449 Oct  2 04:00 analysis/output/oP0_faultdetect.log
+-rw-r--r-- 1 RH 197121       782 Oct  2 04:52 analysis/output/oP10_cp.log
+-rw-r--r-- 1 RH 197121     77299 Oct  2 04:53 analysis/output/oP10_faultdetect.log
+-rw-r--r-- 1 RH 197121       782 Oct  2 04:57 analysis/output/oP11_cp.log
+-rw-r--r-- 1 RH 197121     77584 Oct  2 04:57 analysis/output/oP11_faultdetect.log
+-rw-r--r-- 1 RH 197121       792 Oct  2 05:01 analysis/output/oP12_cp.log
+-rw-r--r-- 1 RH 197121     77869 Oct  2 05:02 analysis/output/oP12_faultdetect.log
+-rw-r--r-- 1 RH 197121       792 Oct  2 05:06 analysis/output/oP13_cp.log
+-rw-r--r-- 1 RH 197121     78154 Oct  2 05:06 analysis/output/oP13_faultdetect.log
+-rw-r--r-- 1 RH 197121       772 Oct  2 05:10 analysis/output/oP14_cp.log
+-rw-r--r-- 1 RH 197121     78439 Oct  2 05:11 analysis/output/oP14_faultdetect.log
+-rw-r--r-- 1 RH 197121       772 Oct  2 05:15 analysis/output/oP15_cp.log
+-rw-r--r-- 1 RH 197121     78724 Oct  2 05:15 analysis/output/oP15_faultdetect.log
+-rw-r--r-- 1 RH 197121       782 Oct  2 05:19 analysis/output/oP16_cp.log
+-rw-r--r-- 1 RH 197121     79009 Oct  2 05:20 analysis/output/oP16_faultdetect.log
+-rw-r--r-- 1 RH 197121       781 Oct  2 04:04 analysis/output/oP1_cp.log
+-rw-r--r-- 1 RH 197121     74734 Oct  2 04:05 analysis/output/oP1_faultdetect.log
+-rw-r--r-- 1 RH 197121       761 Oct  2 04:09 analysis/output/oP2_cp.log
+-rw-r--r-- 1 RH 197121     75019 Oct  2 04:09 analysis/output/oP2_faultdetect.log
+-rw-r--r-- 1 RH 197121       791 Oct  2 04:13 analysis/output/oP3_cp.log
+-rw-r--r-- 1 RH 197121     75304 Oct  2 04:14 analysis/output/oP3_faultdetect.log
+-rw-r--r-- 1 RH 197121       781 Oct  2 04:18 analysis/output/oP4_cp.log
+-rw-r--r-- 1 RH 197121     75589 Oct  2 04:18 analysis/output/oP4_faultdetect.log
+-rw-r--r-- 1 RH 197121       781 Oct  2 04:23 analysis/output/oP5_cp.log
+-rw-r--r-- 1 RH 197121     75874 Oct  2 04:23 analysis/output/oP5_faultdetect.log
+-rw-r--r-- 1 RH 197121       771 Oct  2 04:27 analysis/output/oP6_cp.log
+-rw-r--r-- 1 RH 197121     76159 Oct  2 04:27 analysis/output/oP6_faultdetect.log
+-rw-r--r-- 1 RH 197121       772 Oct  2 07:46 analysis/output/oP74_cp.log
+-rw-r--r-- 1 RH 197121     86289 Oct  2 07:47 analysis/output/oP74_faultdetect.log
+-rw-r--r-- 1 RH 197121       772 Oct  2 07:51 analysis/output/oP75_cp.log
+-rw-r--r-- 1 RH 197121     86574 Oct  2 07:51 analysis/output/oP75_faultdetect.log
+-rw-r--r-- 1 RH 197121       782 Oct  2 07:55 analysis/output/oP76_cp.log
+-rw-r--r-- 1 RH 197121     86859 Oct  2 07:56 analysis/output/oP76_faultdetect.log
+-rw-r--r-- 1 RH 197121       782 Oct  2 08:00 analysis/output/oP77_cp.log
+-rw-r--r-- 1 RH 197121     87144 Oct  2 08:00 analysis/output/oP77_faultdetect.log
+-rw-r--r-- 1 RH 197121       792 Oct  2 08:05 analysis/output/oP78_cp.log
+-rw-r--r-- 1 RH 197121     87429 Oct  2 08:05 analysis/output/oP78_faultdetect.log
+-rw-r--r-- 1 RH 197121       781 Oct  2 04:31 analysis/output/oP7_cp.log
+-rw-r--r-- 1 RH 197121     76444 Oct  2 04:32 analysis/output/oP7_faultdetect.log
+-rw-r--r-- 1 RH 197121       771 Oct  2 04:43 analysis/output/oP8_cp.log
+-rw-r--r-- 1 RH 197121     76729 Oct  2 04:43 analysis/output/oP8_faultdetect.log
+-rw-r--r-- 1 RH 197121       771 Oct  2 04:48 analysis/output/oP9_cp.log
+-rw-r--r-- 1 RH 197121     77014 Oct  2 04:48 analysis/output/oP9_faultdetect.log
+-rw-r--r-- 1 RH 197121      2251 Oct  1 14:19 analysis/output/oP_cp.log
+-rw-r--r-- 1 RH 197121     59799 Oct  1 14:19 analysis/output/oP_faultdetect.log
+-rw-r--r-- 1 RH 197121      1541 Oct  1 14:34 analysis/output/oQ_cp.log
+-rw-r--r-- 1 RH 197121     59944 Oct  1 14:34 analysis/output/oQ_faultdetect.log
+-rw-r--r-- 1 RH 197121      1396 Oct  2 13:34 analysis/output/oR10_cp.log
+-rw-r--r-- 1 RH 197121     99474 Oct  2 13:34 analysis/output/oR10_faultdetect.log
+-rw-r--r-- 1 RH 197121      1416 Oct  2 13:39 analysis/output/oR11_cp.log
+-rw-r--r-- 1 RH 197121     99759 Oct  2 13:39 analysis/output/oR11_faultdetect.log
+-rw-r--r-- 1 RH 197121      1436 Oct  2 13:43 analysis/output/oR12_cp.log
+-rw-r--r-- 1 RH 197121    100044 Oct  2 13:44 analysis/output/oR12_faultdetect.log
+-rw-r--r-- 1 RH 197121      1426 Oct  2 13:48 analysis/output/oR13_cp.log
+-rw-r--r-- 1 RH 197121    100329 Oct  2 13:48 analysis/output/oR13_faultdetect.log
+-rw-r--r-- 1 RH 197121      1426 Oct  2 13:53 analysis/output/oR14_cp.log
+-rw-r--r-- 1 RH 197121    100614 Oct  2 13:53 analysis/output/oR14_faultdetect.log
+-rw-r--r-- 1 RH 197121      1416 Oct  2 13:57 analysis/output/oR15_cp.log
+-rw-r--r-- 1 RH 197121    100899 Oct  2 13:58 analysis/output/oR15_faultdetect.log
+-rw-r--r-- 1 RH 197121      1406 Oct  2 14:02 analysis/output/oR16_cp.log
+-rw-r--r-- 1 RH 197121    101184 Oct  2 14:02 analysis/output/oR16_faultdetect.log
+-rw-r--r-- 1 RH 197121      1446 Oct  2 14:07 analysis/output/oR17_cp.log
+-rw-r--r-- 1 RH 197121    101469 Oct  2 14:07 analysis/output/oR17_faultdetect.log
+-rw-r--r-- 1 RH 197121      1426 Oct  2 14:11 analysis/output/oR18_cp.log
+-rw-r--r-- 1 RH 197121    101754 Oct  2 14:12 analysis/output/oR18_faultdetect.log
+-rw-r--r-- 1 RH 197121      1426 Oct  2 14:16 analysis/output/oR19_cp.log
+-rw-r--r-- 1 RH 197121    102039 Oct  2 14:16 analysis/output/oR19_faultdetect.log
+-rw-r--r-- 1 RH 197121      1406 Oct  2 12:53 analysis/output/oR1_cp.log
+-rw-r--r-- 1 RH 197121     96909 Oct  2 12:53 analysis/output/oR1_faultdetect.log
+-rw-r--r-- 1 RH 197121      1416 Oct  2 14:21 analysis/output/oR20_cp.log
+-rw-r--r-- 1 RH 197121    102324 Oct  2 14:21 analysis/output/oR20_faultdetect.log
+-rw-r--r-- 1 RH 197121      1396 Oct  2 12:57 analysis/output/oR2_cp.log
+-rw-r--r-- 1 RH 197121     97194 Oct  2 12:58 analysis/output/oR2_faultdetect.log
+-rw-r--r-- 1 RH 197121      1396 Oct  2 13:02 analysis/output/oR3_cp.log
+-rw-r--r-- 1 RH 197121     97479 Oct  2 13:02 analysis/output/oR3_faultdetect.log
+-rw-r--r-- 1 RH 197121      1426 Oct  2 13:07 analysis/output/oR4_cp.log
+-rw-r--r-- 1 RH 197121     97764 Oct  2 13:07 analysis/output/oR4_faultdetect.log
+-rw-r--r-- 1 RH 197121      1416 Oct  2 13:11 analysis/output/oR5_cp.log
+-rw-r--r-- 1 RH 197121     98049 Oct  2 13:11 analysis/output/oR5_faultdetect.log
+-rw-r--r-- 1 RH 197121      1396 Oct  2 13:16 analysis/output/oR6_cp.log
+-rw-r--r-- 1 RH 197121     98334 Oct  2 13:16 analysis/output/oR6_faultdetect.log
+-rw-r--r-- 1 RH 197121      1396 Oct  2 13:20 analysis/output/oR7_cp.log
+-rw-r--r-- 1 RH 197121     98619 Oct  2 13:21 analysis/output/oR7_faultdetect.log
+-rw-r--r-- 1 RH 197121      1416 Oct  2 13:25 analysis/output/oR8_cp.log
+-rw-r--r-- 1 RH 197121     98904 Oct  2 13:25 analysis/output/oR8_faultdetect.log
+-rw-r--r-- 1 RH 197121      1416 Oct  2 13:30 analysis/output/oR9_cp.log
+-rw-r--r-- 1 RH 197121     99189 Oct  2 13:30 analysis/output/oR9_faultdetect.log
+-rw-r--r-- 1 RH 197121         0 Oct  1 14:49 analysis/output/oR_cp.log
+-rw-r--r-- 1 RH 197121     59944 Oct  1 14:50 analysis/output/oR_faultdetect.log
+-rw-r--r-- 1 RH 197121      7318 Oct  1 14:56 analysis/output/oS_cp.log
+-rw-r--r-- 1 RH 197121     59944 Oct  1 14:56 analysis/output/oS_faultdetect.log
+-rw-r--r-- 1 RH 197121      2800 Oct  1 14:59 analysis/output/oT_cp.log
+-rw-r--r-- 1 RH 197121     60089 Oct  1 15:00 analysis/output/oT_faultdetect.log
+-rw-r--r-- 1 RH 197121      1681 Oct  1 15:04 analysis/output/oU_cp.log
+-rw-r--r-- 1 RH 197121     60234 Oct  1 15:04 analysis/output/oU_faultdetect.log
+-rw-r--r-- 1 RH 197121      7696 Oct  1 15:21 analysis/output/oW_cp.log
+-rw-r--r-- 1 RH 197121     60234 Oct  1 15:22 analysis/output/oW_faultdetect.log
+-rw-r--r-- 1 RH 197121         0 Oct  1 15:29 analysis/output/oX_cp.log
+-rw-r--r-- 1 RH 197121     60234 Oct  1 15:29 analysis/output/oX_faultdetect.log
+-rw-r--r-- 1 RH 197121         0 Oct  1 15:37 analysis/output/oY_cp.log
+-rw-r--r-- 1 RH 197121     60234 Oct  1 15:38 analysis/output/oY_faultdetect.log
+-rw-r--r-- 1 RH 197121     26910 Oct  1 15:59 analysis/output/oZ_cp.log
+-rw-r--r-- 1 RH 197121     60234 Oct  1 15:59 analysis/output/oZ_faultdetect.log
+-rw-r--r-- 1 RH 197121     38871 Oct  2 03:44 analysis/output/oc1_cp.log
+-rw-r--r-- 1 RH 197121     74019 Oct  2 03:44 analysis/output/oc1_faultdetect.log
+-rw-r--r-- 1 RH 197121      1637 Oct  1 12:08 analysis/output/ocd_cp.log
+-rw-r--r-- 1 RH 197121     55523 Oct  1 12:08 analysis/output/ocd_faultdetect.log
+-rw-r--r-- 1 RH 197121      5171 Oct  1 12:13 analysis/output/om1_cp.log
+-rw-r--r-- 1 RH 197121     55813 Oct  1 12:14 analysis/output/om1_faultdetect.log
+-rw-r--r-- 1 RH 197121      1665 Oct  1 12:16 analysis/output/om2_cp.log
+-rw-r--r-- 1 RH 197121     55958 Oct  1 12:16 analysis/output/om2_faultdetect.log
+-rw-r--r-- 1 RH 197121      5886 Sep 30 23:53 analysis/output/om8_cp.log
+-rw-r--r-- 1 RH 197121      2891 Sep 30 23:58 analysis/output/om8b_cp.log
+-rw-r--r-- 1 RH 197121      7122 Sep 30 23:02 analysis/output/otest_cp.log
+-rw-r--r-- 1 RH 197121     14640 Oct  1 00:31 analysis/output/rdA_r1.log
+-rw-r--r-- 1 RH 197121     20775 Oct  1 00:41 analysis/output/rdA_r2.log
+-rw-r--r-- 1 RH 197121         0 Oct  2 18:55 analysis/output/retry64560.log
+-rw-r--r-- 1 RH 197121      1000 Oct  2 20:45 analysis/output/retry_f50.log
+-rw-r--r-- 1 RH 197121         0 Oct  2 19:12 analysis/output/retry_v2.log
+-rw-r--r-- 1 RH 197121         0 Oct  2 19:26 analysis/output/retry_v3.log
+-rw-r--r-- 1 RH 197121      4676 Sep 30 21:12 analysis/output/s20_cp.log
+-rw-r--r-- 1 RH 197121     28888 Sep 30 21:21 analysis/output/s20b_cp.log
+-rw-r--r-- 1 RH 197121     25560 Sep 30 21:44 analysis/output/s21_cp.log
+-rw-r--r-- 1 RH 197121      1941 Sep 30 21:49 analysis/output/s21b_cp.log
+-rw-r--r-- 1 RH 197121      6418 Sep 30 21:35 analysis/output/s21d_cp.log
+-rw-r--r-- 1 RH 197121      1948 Sep 30 22:05 analysis/output/s22c_cp.log
+-rw-r--r-- 1 RH 197121      2108 Sep 30 22:13 analysis/output/s22d_cp.log
+-rw-r--r-- 1 RH 197121      4511 Sep 30 22:22 analysis/output/s22e_cp.log
+-rw-r--r-- 1 RH 197121      1628 Sep 30 22:28 analysis/output/s22f_cp.log
+-rw-r--r-- 1 RH 197121      1611 Sep 30 22:33 analysis/output/s22g_cp.log
+-rw-r--r-- 1 RH 197121     14769 Sep 30 22:43 analysis/output/s22h_cp.log
+-rw-r--r-- 1 RH 197121      6883 Sep 30 22:47 analysis/output/s22i_cp.log
+-rw-r--r-- 1 RH 197121       467 Oct  2 21:46 analysis/output/scan60_affinity.log
+-rw-r--r-- 1 RH 197121     27699 Oct  1 21:21 analysis/output/scanS108_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:21 analysis/output/scanS108_faultdetect.log
+-rw-r--r-- 1 RH 197121     29091 Oct  1 21:22 analysis/output/scanS110_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:23 analysis/output/scanS110_faultdetect.log
+-rw-r--r-- 1 RH 197121     29134 Oct  1 21:24 analysis/output/scanS118_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:24 analysis/output/scanS118_faultdetect.log
+-rw-r--r-- 1 RH 197121     29006 Oct  1 21:25 analysis/output/scanS120_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:25 analysis/output/scanS120_faultdetect.log
+-rw-r--r-- 1 RH 197121     29134 Oct  1 21:26 analysis/output/scanS128_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:26 analysis/output/scanS128_faultdetect.log
+-rw-r--r-- 1 RH 197121     27708 Oct  1 21:28 analysis/output/scanS130_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:28 analysis/output/scanS130_faultdetect.log
+-rw-r--r-- 1 RH 197121     28507 Oct  1 21:29 analysis/output/scanS138_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:29 analysis/output/scanS138_faultdetect.log
+-rw-r--r-- 1 RH 197121     29098 Oct  1 21:30 analysis/output/scanS140_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:30 analysis/output/scanS140_faultdetect.log
+-rw-r--r-- 1 RH 197121     29134 Oct  1 21:31 analysis/output/scanS148_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:32 analysis/output/scanS148_faultdetect.log
+-rw-r--r-- 1 RH 197121     27708 Oct  1 21:33 analysis/output/scanS150_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:33 analysis/output/scanS150_faultdetect.log
+-rw-r--r-- 1 RH 197121     29134 Oct  1 21:34 analysis/output/scanS158_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:34 analysis/output/scanS158_faultdetect.log
+-rw-r--r-- 1 RH 197121     29089 Oct  1 21:35 analysis/output/scanS160_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:36 analysis/output/scanS160_faultdetect.log
+-rw-r--r-- 1 RH 197121     27690 Oct  1 21:37 analysis/output/scanS168_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:37 analysis/output/scanS168_faultdetect.log
+-rw-r--r-- 1 RH 197121     27699 Oct  1 21:38 analysis/output/scanS170_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:38 analysis/output/scanS170_faultdetect.log
+-rw-r--r-- 1 RH 197121     29136 Oct  1 21:39 analysis/output/scanS178_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:39 analysis/output/scanS178_faultdetect.log
+-rw-r--r-- 1 RH 197121     29118 Oct  1 21:41 analysis/output/scanS180_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:41 analysis/output/scanS180_faultdetect.log
+-rw-r--r-- 1 RH 197121     27685 Oct  1 21:42 analysis/output/scanS188_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:42 analysis/output/scanS188_faultdetect.log
+-rw-r--r-- 1 RH 197121     29134 Oct  1 21:43 analysis/output/scanS190_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:43 analysis/output/scanS190_faultdetect.log
+-rw-r--r-- 1 RH 197121     30531 Oct  1 21:46 analysis/output/scanS28_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:47 analysis/output/scanS28_faultdetect.log
+-rw-r--r-- 1 RH 197121     27663 Oct  1 21:48 analysis/output/scanS30_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:48 analysis/output/scanS30_faultdetect.log
+-rw-r--r-- 1 RH 197121     29090 Oct  1 21:49 analysis/output/scanS38_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:49 analysis/output/scanS38_faultdetect.log
+-rw-r--r-- 1 RH 197121      4886 Oct  1 21:50 analysis/output/scanS40_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:50 analysis/output/scanS40_faultdetect.log
+-rw-r--r-- 1 RH 197121     29115 Oct  1 21:52 analysis/output/scanS48_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:52 analysis/output/scanS48_faultdetect.log
+-rw-r--r-- 1 RH 197121     30531 Oct  1 21:53 analysis/output/scanS50_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:53 analysis/output/scanS50_faultdetect.log
+-rw-r--r-- 1 RH 197121     30488 Oct  1 21:54 analysis/output/scanS58_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:54 analysis/output/scanS58_faultdetect.log
+-rw-r--r-- 1 RH 197121     30515 Oct  1 21:55 analysis/output/scanS60_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:56 analysis/output/scanS60_faultdetect.log
+-rw-r--r-- 1 RH 197121     31077 Oct  1 21:57 analysis/output/scanS68_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:57 analysis/output/scanS68_faultdetect.log
+-rw-r--r-- 1 RH 197121     30540 Oct  1 21:58 analysis/output/scanS70_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 21:58 analysis/output/scanS70_faultdetect.log
+-rw-r--r-- 1 RH 197121     30486 Oct  1 21:59 analysis/output/scanS78_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 22:00 analysis/output/scanS78_faultdetect.log
+-rw-r--r-- 1 RH 197121     29106 Oct  1 22:01 analysis/output/scanS80_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 22:01 analysis/output/scanS80_faultdetect.log
+-rw-r--r-- 1 RH 197121     29115 Oct  1 22:02 analysis/output/scanS88_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 22:02 analysis/output/scanS88_faultdetect.log
+-rw-r--r-- 1 RH 197121     29079 Oct  1 22:03 analysis/output/scanS90_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 22:03 analysis/output/scanS90_faultdetect.log
+-rw-r--r-- 1 RH 197121     30522 Oct  1 22:04 analysis/output/scanS98_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 22:05 analysis/output/scanS98_faultdetect.log
+-rw-r--r-- 1 RH 197121     30551 Oct  1 22:06 analysis/output/scanSa0_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 22:06 analysis/output/scanSa0_faultdetect.log
+-rw-r--r-- 1 RH 197121     30540 Oct  1 22:07 analysis/output/scanSa8_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 22:07 analysis/output/scanSa8_faultdetect.log
+-rw-r--r-- 1 RH 197121     30486 Oct  1 22:08 analysis/output/scanSb0_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 22:09 analysis/output/scanSb0_faultdetect.log
+-rw-r--r-- 1 RH 197121     31965 Oct  1 22:10 analysis/output/scanSb8_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 22:10 analysis/output/scanSb8_faultdetect.log
+-rw-r--r-- 1 RH 197121     30531 Oct  1 22:11 analysis/output/scanSc0_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 22:11 analysis/output/scanSc0_faultdetect.log
+-rw-r--r-- 1 RH 197121     29070 Oct  1 22:12 analysis/output/scanSc8_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 22:12 analysis/output/scanSc8_faultdetect.log
+-rw-r--r-- 1 RH 197121     30522 Oct  1 22:14 analysis/output/scanSd0_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 22:14 analysis/output/scanSd0_faultdetect.log
+-rw-r--r-- 1 RH 197121     29650 Oct  1 22:15 analysis/output/scanSd8_cp.log
+-rw-r--r-- 1 RH 197121     61249 Oct  1 22:15 analysis/output/scanSd8_faultdetect.log
+-rw-r--r-- 1 RH 197121         0 Oct  1 10:27 analysis/output/scl_driver.log
+-rw-r--r-- 1 RH 197121         0 Oct  1 10:37 analysis/output/scl_s10.log
+-rw-r--r-- 1 RH 197121         0 Oct  1 10:41 analysis/output/scl_s12.log
+-rw-r--r-- 1 RH 197121      3136 Oct  1 10:47 analysis/output/scl_s6.log
+-rw-r--r-- 1 RH 197121      1534 Oct  1 10:44 analysis/output/scl_s8.log
+--- A4 device_archive ---
+logcat_live
+logdump
+sync_boot10_pre
+sync_boot11_pre
+sync_boot12_pre
+sync_boot13_pre
+sync_boot14_pre
+sync_boot15_pre
+sync_boot16_pre
+sync_boot17_pre
+sync_boot18_pre
+sync_boot19_pre
+sync_boot1_hit
+sync_boot1_pre
+sync_boot20_pre
+sync_boot21_pre
+sync_boot22_pre
+sync_boot23_pre
+sync_boot24_pre
+sync_boot25_pre
+sync_boot26_pre
+sync_boot27_pre
+sync_boot28_pre
+sync_boot29_pre
+sync_boot2_pre
+sync_boot30_pre
+sync_boot31_pre
+sync_boot32_pre
+sync_boot33_pre
+sync_boot34_pre
+sync_boot35_pre
+sync_boot36_pre
+sync_boot37_pre
+sync_boot38_pre
+sync_boot39_pre
+sync_boot3_pre
+sync_boot40_pre
+sync_boot4_pre
+sync_boot5_pre
+sync_boot6_pre
+sync_boot7_pre
+sync_boot8_pre
+sync_boot9_pre
+sync_c78boot1_pre
+sync_c78boot2_pre
+sync_c78boot3_pre
+sync_c78boot4_pre
+sync_c78boot5_pre
+sync_c78boot6_pre
+sync_c78boot7_pre
+sync_c78boot8_pre
+sync_c79boot1_pre
+sync_c79boot2_pre
+sync_c79boot3_pre
+sync_c79boot4_pre
+sync_c79boot5_pre
+sync_c79boot6_pre
+sync_c79boot7_pre
+sync_c80boot1_pre
+sync_c81boot1_pre
+sync_c81boot2_pre
+sync_c81boot3_pre
+sync_c81boot4_pre
+sync_c81boot5_pre
+sync_c81boot6_pre
+sync_c81boot7_pre
+sync_c81boot8_pre
+sync_v2boot1_hit
+sync_v2boot1_pre
+sync_v2boot2_hit
+sync_v2boot2_pre
+sync_v2boot3_pre
+sync_v2boot4_pre
+sync_v2boot5_pre
+sync_v2boot6_pre
+sync_v2boot7_pre
+sync_v2boot8_pre
+--- A5 fw/images ---
+eng_system.img
+eng_vendor.img
+kpatch.img
+vendor.img
+vendor.raw.img
+vendor_dlkm.img
+vendor_dlkm.raw.img
+--- B 其余 ---
+fire_20260928_151924
+fire_20260928_180337
+fire_20260928_1840
+fire_20260928_1853
+fire_20260928_1904
+fire_20260928_1935
+fire_20260928_1952
+fire_20260928_2007
+fire_20260928_2022
+fire_20260928_2140
+fire_20260928_2157
+fire_20260928_2204
+fire_20260928_2225
+fire_20260928_2230
+fire_20260928_2238
+fire_20260928_2246
+fire_20260928_2253
+fire_20260928_2300
+fire_20260928_2309
+fire_20260928_2320
+fire_20260928_2330
+fire_20260928_2341
+fire_20260928_2349
+fire_20260928_all
+fire_20260928_fire1
+fire_20260929_morning
+ShizukuVerifier

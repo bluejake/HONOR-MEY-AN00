@@ -1,0 +1,30 @@
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:buildCMakeRelWithDebInfo[arm64-v8a]' (registered by plugin 'com.android.internal.application').
+> com.android.ide.common.process.ProcessException: ninja: Entering directory `D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app\.cxx\RelWithDebInfo\2s2u6k4p\arm64-v8a'
+  [1/2] Building C object CMakeFiles/exp.dir/exp.c.o
+  FAILED: CMakeFiles/exp.dir/exp.c.o 
+  <HOME>\.workbuddy\binaries\android\android-ndk-r27c\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android32 --sysroot=<HOME>/.workbuddy/binaries/android/android-ndk-r27c/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dexp_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -ID:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni -Wall -Wextra -fno-stack-protector -fomit-frame-pointer -fvisibility=hidden -ffunction-sections -fdata-sections -Oz -flto=thin -Wno-format-security -O2 -g -DNDEBUG -fPIC -MD -MT CMakeFiles/exp.dir/exp.c.o -MF CMakeFiles\exp.dir\exp.c.o.d -o CMakeFiles/exp.dir/exp.c.o -c D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c
+  D:/MEY-AN00-root-repro/analysis/scratch/DirtyFrag/app/src/main/jni/exp.c:993:19: error: use of undeclared identifier 'sentry_r'
+    993 |     restore_hook(&sentry_r, reporter);
+        |                   ^
+  1 error generated.
+  ninja: build stopped: subcommand failed.
+  
+  C++ build system [build] failed while executing:
+      @echo off
+      "<HOME>\\.workbuddy\\binaries\\android\\cmake\\3.22.1\\bin\\ninja.exe" ^
+        -C ^
+        "D:\\MEY-AN00-root-repro\\analysis\\scratch\\DirtyFrag\\app\\.cxx\\RelWithDebInfo\\2s2u6k4p\\arm64-v8a" ^
+        exp
+    from D:\MEY-AN00-root-repro\analysis\scratch\DirtyFrag\app
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 16s

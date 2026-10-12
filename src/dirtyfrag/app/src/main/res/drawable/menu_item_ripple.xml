@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Grey press-highlight for popup menu rows (mono UI, no blue). -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#4DC9C9C9">
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFFFF" />
+        </shape>
+    </item>
+</ripple>

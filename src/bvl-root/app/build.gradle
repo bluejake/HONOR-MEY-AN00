@@ -1,0 +1,42 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'honor.root'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'honor.root'
+        minSdk 30
+        targetSdk 35
+        versionCode 1
+        versionName '0.1.0-bvl'
+
+        ndkVersion '27.0.12077973'
+        externalNativeBuild {
+            cmake {
+                arguments '-DANDROID_STL=c++_static'
+                abiFilters 'arm64-v8a'
+            }
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path 'src/main/jni/CMakeLists.txt'
+            version '3.22.1+'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            debuggable true   // bring-up build; strip before shipping
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+}
