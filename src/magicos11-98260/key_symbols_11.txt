@@ -1,0 +1,45 @@
+# key_symbols_11.txt — MagicOS 11 内核关键符号（精简版）
+# 来源：本机 kernel_11.elf（vmlinux-to-elf 恢复，共 111074 行符号）
+# 格式：<镜像地址> <类型> <符号名>；基址 _text = 0xffffffc080000000
+# 完整符号表不入库（4.8 MB，属固件衍生数据），可用 llvm-nm 从本机 kernel 镜像重新导出
+# 用途：98260 payload 的 11 项常量对账 + 补丁状态二进制判定
+#
+# 未找到的符号（2）：cleanup_timerqueue, posixtimer_exec
+#   posixtimer_exec 缺失 = 修复 commit acb03d388181 未合入 => 未修补
+#
+ffffffc080000000 T _text
+ffffffc08217e280 T init_task
+ffffffc082190790 T init_cred
+ffffffc0821903c0 T init_nsproxy
+ffffffc082190238 T init_pid_ns
+ffffffc0802388e0 T commit_creds
+ffffffc080936e68 T prepare_kernel_cred
+ffffffc080238438 T prepare_creds
+ffffffc080238bac T override_creds
+ffffffc0801cb0fc T copy_process
+ffffffc0823ba418 T selinux_state
+ffffffc08216ae0c T panic_on_warn
+ffffffc08218f228 T root_user
+ffffffc08218ef98 T init_user_ns
+ffffffc082190cf8 T init_ucounts
+ffffffc082190788 t init_groups
+ffffffc08239c7a0 t posix_timers_cache
+ffffffc0808851bc t posix_cpu_timer_del
+ffffffc08016e30c T posix_cpu_timers_exit
+ffffffc08062f8b4 t posix_timer_unhash_and_free
+ffffffc0803afc58 t do_timer_create
+ffffffc0803afad4 T exit_itimers
+ffffffc0801d20bc T begin_new_exec
+ffffffc08003a9d4 T rb_erase
+ffffffc08003f724 T timerqueue_add
+ffffffc08003f7d8 T timerqueue_del
+ffffffc081699f58 T kmalloc_caches
+ffffffc0801955b4 T kmem_cache_alloc
+ffffffc08005a8c8 T kfree
+ffffffc08007e1d4 T find_task_by_vpid
+ffffffc08216b658 T __per_cpu_offset
+ffffffc081699ac8 T memstart_addr
+ffffffc081699b80 T kimage_voffset
+ffffffc081184208 t anon_pipe_buf_ops
+ffffffc08035d180 T alloc_pipe_info
+ffffffc08035dbb0 t pipe_write

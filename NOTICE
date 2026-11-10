@@ -1,0 +1,60 @@
+MEY-AN00 临时 Root 研究
+Copyright (C) 2026 本项目贡献者
+
+本作品为自由软件：你可以依据自由软件基金会发布的 GNU 通用公共许可证
+第 3 版（或任何后续版本）的条款重新发布或修改它。
+详见随附的 LICENSE 文件，或 <https://www.gnu.org/licenses/gpl-3.0.html>。
+
+本软件按「原样」分发，不含任何担保。详见 LICENSE 第 15、16 节。
+
+--------------------------------------------------------------------------
+第三方声明
+--------------------------------------------------------------------------
+
+1. DirtyFrag（CVE-2026-43284）主线
+   本仓库 src/dirtyfrag/ 的工作副本派生自公开上游，血统链为
+   mitschud/DirtyFrag → diabl0w/DFRoot → woshigenm/DirtyFrag（基线 tag 3203db9）。
+   上游分别见各自仓库的许可证声明。
+   上游自述致谢（转引）：lsposed/lspromise、polygraphene/DFReroot、
+   combeng6th/DirtyInit。完整清单见 REFERENCES.md。
+
+2. KernelSU
+   运行时依赖的 root 框架，为独立上游项目（tiann/KernelSU 等）。
+   本仓库不包含其源代码或预编译二进制，需自行获取。
+
+3. 内核与 AOSP 代码
+   分析过程中引用了公开的内核源码（AOSP common / GKI）用于机理比对。
+   本仓库仅引用少量片段用于说明，不分发完整内核树。上游修复 commit
+   acb03d388181（引入 posixtimer_exec）作为补丁判定依据被引用。
+
+4. CVE-2026-98260 上游（2026-11 收录）
+   本路线参考 Again1996-bit/CVE-2026-98260-GhostKey（profile 驱动）与
+   nisu123f/dada-cve-AN00（硬编码常量）两个公开项目。
+   dada-cve-AN00 的 kernel/cve-2026-98260.c 已【原样收录】于
+   src/magicos11-98260/upstream/，并附 MIT 许可证全文与来源链说明
+   （LICENSE-MIT.txt / SOURCE-NOTICE.txt）。该文件自身无 SPDX/Copyright 行，
+   许可证依据为其头注声明的 MIT 血统，属【授权灰区】而非已确认；
+   权利人有异议请经 SECURITY.md 私有渠道联系，核实后移除或重新授权。
+   现役 payload（cve-2026-98260-uid0）由该源码用 NDK 27.0.12077973
+   字节级复现编译得到并随仓库分发；已逐字节扫描，无凭据或个人数据。
+   GhostKey 与 dada 的 App 工程、native 库及任何 APK 均【未】收录。
+
+--------------------------------------------------------------------------
+明确不包含的内容
+--------------------------------------------------------------------------
+
+* 厂商固件镜像（体积与厂商分发条款所限，不在本仓库分发）
+* 厂商私有二进制、签名密钥、keystore
+* 本项目的授权签发系统：私钥（private.pem）、dk.bin、发码器与硬编码口令
+  —— 已整体排除，代码中的对应字面量已替换为占位符
+* 含 IMEI / 序列号 / boot_id / KASLR slide / 随机安装路径等身份数据的设备原始日志
+  —— 公开的仅为脱敏里程碑摘要；全库 UUID 已确定性假名化为 <ID-xx>，
+     个人工作区路径已替换为 <REPO_ROOT>（详见 SECURITY.md）
+* 设备固件提取产物：kernel_11.elf / kernel_11.img / vmlinux.btf / 完整符号表
+  —— 属固件衍生数据，不入库；仅入库精简后的关键符号表与偏移头
+* 除 upstream/ 明确收录并附许可证说明的那一份外，第三方 exploit 仓库的其余
+  源代码与 App 工程仍仅以链接 + 署名方式引用（见 REFERENCES.md）
+* 任何 Android APK（.gitignore 明确排除 *.apk，项目已决定不上传）
+
+若你在本仓库中发现任何应被移除的私有凭据或受版权保护内容，
+请通过 SECURITY.md 中的方式联系。

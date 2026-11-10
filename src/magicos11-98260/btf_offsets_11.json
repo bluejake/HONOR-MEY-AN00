@@ -1,0 +1,122 @@
+{
+ "task_struct": {
+  "size": 4800,
+  "offsets": {
+   "stack": 56,
+   "tasks": 1360,
+   "mm": 1440,
+   "active_mm": 1448,
+   "pid": 1560,
+   "tgid": 1564,
+   "thread_pid": 1664,
+   "posix_cputimers": 1912,
+   "real_cred": 2072,
+   "cred": 2080,
+   "comm": 2096,
+   "nsproxy": 2160,
+   "sighand": 2176
+  }
+ },
+ "cred": {
+  "size": 184,
+  "offsets": {
+   "usage": 0,
+   "uid": 8,
+   "gid": 12,
+   "suid": 16,
+   "sgid": 20,
+   "euid": 24,
+   "egid": 28,
+   "fsuid": 32,
+   "fsgid": 36,
+   "cap_permitted": 56,
+   "cap_effective": 64,
+   "security": 128,
+   "user_ns": 144
+  }
+ },
+ "posix_cputimers": {
+  "size": 80,
+  "offsets": {}
+ },
+ "k_itimer": {
+  "size": 264,
+  "offsets": {
+   "it_clock": 48,
+   "it_id": 52,
+   "it_overrun": 64,
+   "it_interval": 88,
+   "it_signal": 96
+  }
+ },
+ "cpu_timer": {
+  "size": 80,
+  "offsets": {
+   "node": 0,
+   "head": 32,
+   "pid": 40
+  }
+ },
+ "timerqueue_node": {
+  "size": 32,
+  "offsets": {
+   "node": 0,
+   "expires": 24
+  }
+ },
+ "pipe_buffer": {
+  "size": 40,
+  "offsets": {
+   "page": 0,
+   "offset": 8,
+   "len": 12,
+   "ops": 16,
+   "flags": 24,
+   "private": 32
+  }
+ },
+ "pipe_inode_info": {
+  "size": 184,
+  "offsets": {
+   "mutex": 0,
+   "head": 96,
+   "tail": 100,
+   "ring_size": 108,
+   "nr_accounted": 112,
+   "readers": 116,
+   "writers": 120,
+   "files": 124,
+   "r_counter": 128,
+   "bufs": 168,
+   "user": 176
+  }
+ },
+ "selinux_state": {
+  "size": 128,
+  "offsets": {
+   "enforcing": 0,
+   "initialized": 1,
+   "policy": 72
+  }
+ },
+ "file": {
+  "size": 264,
+  "offsets": {
+   "f_mode": 20,
+   "f_flags": 88,
+   "f_op": 192,
+   "private_data": 216
+  }
+ },
+ "file_operations": {
+  "size": 264,
+  "offsets": {
+   "read": 16,
+   "write": 24,
+   "unlocked_ioctl": 72,
+   "mmap": 88,
+   "open": 104,
+   "release": 120
+  }
+ }
+}

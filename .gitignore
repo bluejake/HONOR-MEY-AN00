@@ -1,0 +1,112 @@
+# ============================================================
+# 固件与镜像（体积巨大且受厂商分发条款约束，一律不入库）
+# ============================================================
+*.img
+*.img.*
+payload.bin
+boot.img
+vendor_boot.img
+init_boot.img
+dtbo.img
+vbmeta.img
+super.img
+system.img
+vendor.img
+product.img
+odm.img
+*.dtb
+*.dtbo
+*.bin
+!*.sh.bin
+# 固件获取说明需要随仓库发布
+firmware/*
+!firmware/README.md
+firmware_*/
+fw/
+adapt_batch/
+device_archive/
+
+# ============================================================
+# 密钥 / 授权 / 个人信息（绝不出门）
+# ============================================================
+*.pem
+*.key
+*.p12
+*.jks
+*.keystore
+private*
+*private*
+dk.bin
+enc_private*
+seal_private.py
+license_kit/
+obf_private*/
+obf_backup*/
+*.jks
+android.jks
+private_key.json
+.env
+*.local
+credential*
+gitconfig
+
+# ============================================================
+# 构建产物与二进制
+# ============================================================
+build/
+*.o
+*.a
+*.so
+*.ko
+*.apk
+# 例外：src/magicos11-98260/cve-2026-98260-uid0 是【刻意入库】的可执行主体
+# （462 KB 静态非 PIE，字节级可复现，见同目录 build.sh）。它无扩展名，
+#  不会被上面的 *.bin / *.so / *.apk 规则命中，属显式白名单式例外。
+# build.sh 的复现产物不应入库：
+*.rebuilt
+*.aab
+*.dex
+*.jar
+*.class
+*.elf
+vmlinux
+vmlinux.*
+Image
+Image.*
+vmlinuz*
+.cxx/
+.externalNativeBuild/
+gradle/
+.gradle/
+local.properties
+*.log
+
+# ============================================================
+# 设备日志（含 IMEI / 序列号等硬件标识）
+# ============================================================
+log.db
+logcat/
+*.logcat
+logs/
+logs_auto/
+
+# ============================================================
+# 参考仓库（上游第三方代码，仅以链接+署名方式引用）
+# ============================================================
+refs/
+reference/
+vendor/
+
+# ============================================================
+# 系统与编辑器
+# ============================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+__pycache__/
+*.pyc
+.idea/
+.vscode/
+.workbuddy/

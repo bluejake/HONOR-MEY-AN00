@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- Dark backdrop for the white grenade foreground; gets tinted by the system palette via themed icons -->
+    <color name="ic_launcher_background">#FF1C1B1F</color>
+</resources>

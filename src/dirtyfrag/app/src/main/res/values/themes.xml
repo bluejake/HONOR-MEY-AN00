@@ -1,0 +1,77 @@
+<resources>
+    <style name="Theme.SysTool" parent="Theme.Material3.DynamicColors.DayNight.NoActionBar">
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:windowBackground">@drawable/bg_liquid</item>
+        <item name="android:statusBarColor">#FF0B0F1E</item>
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="colorSurface">@color/black</item>
+        <item name="colorBackgroundFloating">@color/black</item>
+        <item name="colorSurfaceContainer">@color/black</item>
+        <item name="colorSurfaceContainerHigh">@color/black</item>
+        <item name="colorSurfaceContainerHighest">#FF141821</item>
+        <item name="colorSurfaceContainerLow">@color/black</item>
+        <item name="colorSurfaceContainer">@color/black</item>
+        <item name="colorSurfaceContainerHigh">@color/black</item>
+        <item name="colorSurfaceContainerHighest">@color/black</item>
+        <item name="colorOutline">#FFE8E8E8</item>
+        <!-- Card-styled popup menu (rounded #1C1C1C background). -->
+        <item name="popupMenuStyle">@style/DF_PopupMenu</item>
+        <item name="android:popupMenuStyle">@style/DF_PopupMenu</item>
+        <item name="actionOverflowMenuStyle">@style/DF_OverflowMenu</item>
+        <!-- Must live on the theme (not the popup style): the popup's ListView
+             reads this attr from the activity theme. Provides the centered
+             divider between menu items. -->
+        <item name="dropDownListViewStyle">@style/DF_DropDownListView</item>
+        <item name="android:itemTextAppearance">@style/DF_MenuText</item>
+        <item name="textAppearanceListItemSmall">@style/DF_MenuText</item>
+        <!-- Popup sizing: taller rows, narrower side padding. -->
+        <item name="listPreferredItemHeightSmall">56dp</item>
+        <item name="listPreferredItemPaddingLeft">12dp</item>
+        <item name="listPreferredItemPaddingRight">12dp</item>
+    </style>
+    <!-- Liquid-glass dark dialog: black surface + light text + soft accent. -->
+    <style name="DF_Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorSurface">@color/black</item>
+        <item name="colorBackgroundFloating">@color/black</item>
+        <item name="colorSurfaceContainer">@color/black</item>
+        <item name="colorSurfaceContainerHigh">@color/black</item>
+        <item name="colorSurfaceContainerHighest">#FF141821</item>
+        <item name="colorOnSurface">#FFE8E8E8</item>
+        <item name="colorPrimary">#FF9E9EFF</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnSurfaceVariant">#FFC9C9C9</item>
+    </style>
+
+    <style name="DF_MenuText" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#FFE8E8E8</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="ShapeCircle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="DF_PopupMenu" parent="Widget.Material3.PopupMenu">
+        <item name="android:popupBackground">@drawable/popup_bg</item>
+        <item name="android:popupElevation">24dp</item>
+    </style>
+    <style name="DF_OverflowMenu" parent="Widget.Material3.PopupMenu.Overflow">
+        <item name="android:popupBackground">@drawable/popup_bg</item>
+        <item name="android:popupElevation">24dp</item>
+    </style>
+    <style name="DF_DropDownListView" parent="Widget.AppCompat.ListView.DropDown">
+        <item name="android:divider">@drawable/menu_divider</item>
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:listSelector">@drawable/menu_item_ripple</item>
+    </style>
+    <!-- OneUI-style bold toolbar title -->
+    <style name="ToolbarTitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:textFontWeight">700</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+</resources>

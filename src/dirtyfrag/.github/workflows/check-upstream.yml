@@ -1,0 +1,42 @@
+name: Check KernelSU upstream
+
+on:
+  schedule:
+    - cron: '13,43 * * * *'   # lightweight SHA poll every 6h (no build here)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - id: check
+        run: |
+          NEW=$(git ls-remote https://github.com/tiann/KernelSU HEAD | awk '{print $1}')
+          OLD=$(cat .ksu-sha 2>/dev/null || echo none)
+          echo "upstream=$NEW pinned=$OLD"
+          if [ "$NEW" != "$OLD" ]; then
+            echo "$NEW" > .ksu-sha
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add .ksu-sha
+            git diff --cached --quiet || git commit -m "ci: track ksu ${NEW:0:7}"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Dispatch version-unified build
+        if: steps.check.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          NEW=$(cat .ksu-sha)
+          gh api -X POST "repos/${{ github.repository }}/dispatches" \
+            -f event_type=ksu-update \
+            -F "client_payload[sha]=$NEW"
+          echo "dispatched build for ${NEW:0:7}"

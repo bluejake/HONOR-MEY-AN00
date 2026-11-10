@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Liquid-glass wallpaper backdrop: deep diagonal flow with two soft
+     colour blooms bleeding off-canvas. Glass layers (cards, toolbar,
+     buttons) pick up translucency on top of this. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="315"
+                android:startColor="#FF0D1224"
+                android:centerColor="#FF181430"
+                android:endColor="#FF070812"
+                android:type="linear" />
+        </shape>
+    </item>
+    <item android:top="-200dp" android:right="-140dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="360dp"
+                android:startColor="#664A5AFF"
+                android:endColor="#004A5AFF" />
+        </shape>
+    </item>
+    <item android:bottom="-240dp" android:left="-180dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="400dp"
+                android:startColor="#597A3BFF"
+                android:endColor="#007A3BFF" />
+        </shape>
+    </item>
+    <item android:top="300dp" android:left="-160dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="300dp"
+                android:startColor="#3350C8FF"
+                android:endColor="#0050C8FF" />
+        </shape>
+    </item>
+</layer-list>

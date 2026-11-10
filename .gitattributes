@@ -1,0 +1,15 @@
+# 换行符策略 —— 关系到「半开箱」能否真的跑起来
+#
+# 1) Android /system/bin/sh 不接受 CRLF：#!/system/bin/sh\r 会解析失败。
+#    Windows 默认 core.autocrlf=true 会把 .sh 检出成 CRLF，
+#    adb push 后设备侧脚本即失效。强制 LF。
+*.sh text eol=lf
+
+# 2) 上游 PoC 源码是「逐字节原样收录」（原文件本身是 CRLF）。
+#    -text = 禁用一切换行符转换，保证任何平台 clone 出来的字节都与上游一致。
+#    若用 text/eol=lf 规范化，源码会少 1962 字节（每行一个 \r），
+#    「原样」承诺失效，且 build.sh 的编译输入不再是当初实测的那一份。
+src/magicos11-98260/upstream/*.c -text
+
+# 3) 静态 payload 是 ELF 二进制，禁止任何换行符 / 编码转换。
+src/magicos11-98260/cve-2026-98260-uid0 binary
