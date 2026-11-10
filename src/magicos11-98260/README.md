@@ -43,6 +43,8 @@
 | `run.sh` | 设备侧：环境自检 → 一 boot 一发门 → tracefs → KSU Manager → 哈希校验 → 只读自检 → 真打 → 独立透镜 | — |
 | `onefire.sh` | PC 侧：机型门 → adb 投放 → `adb shell sh run.sh` → 取回日志 | — |
 | `build.sh` | 字节级复现编译（**必须 NDK 27.0.12077973**），自动比对 md5/sha256 | — |
+| `build-profiled.sh` | 编译 **profile 驱动版** payload（常量可在运行时被 profile 覆盖） | — |
+| `profiled/cve-2026-98260-profiled.c` | 由 `upstream/` 改造：15 个常量变成默认值 + 启动时读 profile 覆盖 | — |
 | `upstream/cve-2026-98260.c` | 上游 exploit 源码，单文件自包含，11 项本机常量已硬编码 | md5 `20f29282948a6e6a4760be7463ff139d` |
 | `upstream/LICENSE-MIT.txt`、`SOURCE-NOTICE.txt` | MIT 全文 + 来源链 + 授权灰区说明 | — |
 | `offsets_11.h`、`btf_offsets_11.json`、`profile/`、`key_symbols_11.txt` | 本机固件提取的文本基线 | — |
@@ -66,6 +68,44 @@ llvm-strip --strip-all cve-2026-98260-uid0
 ⚠️ **NDK 版本必须锁定**：用 r27c（27.2.12479018）编译只差 6 字节，全部落在
 `.note.android.ident` 的 NDK 版本串（`r27/12077973` ↔ `r27c/12479018`），代码体零差异。
 早期文档写的简化命令（`-O2 -static`，无 `-std/-pthread/-D_GNU_SOURCE`）**不足以复现**，已废弃。
+
+## profile 驱动版（可选）
+
+`upstream/` 的常量是**编译期写死**的：换内核 build 就得改源码重编。`profiled/` 把其中 16 个值
+改成"默认值 + 运行时覆盖"：
+
+| 项 | 硬编码版 | profile 驱动版 |
+|---|---|---|
+| 常量来源 | `#define` 写死 | `#define` 作默认值，启动时读 profile 覆盖 |
+| 换内核 | 改源码 + 重编 | 只改 profile 文件 |
+| 无 profile 时 | — | **行为与硬编码版相同**（沿用默认值，静默） |
+| 字节级可复现 | ✅ md5 `3e68cb01…` | ❌ 多了解析器代码 |
+
+**查找顺序**：`$CVE98260_PROFILE` → `/data/local/tmp/98260-profile.conf` → 都没有则用默认值。
+
+**可被覆盖的字段**（`offset { }` 块内）：
+
+```
+timer_link  cred_link  task_alloc_link  selinux_link  panic_on_warn
+root_user   user_ns    ucounts          groups
+task_cred   task_struct_size  cred_uid  cred_size
+kitimer_node  kitimer_size
+```
+
+`*_link` 类字段是**链接期地址**，程序会自行取低 21 位（`& 0x1fffff`）用于 KASLR 站点匹配；
+`task_cred` / `cred_uid` / `kitimer_*` 等是结构体偏移，按原值使用。
+
+**编译**：
+
+```bash
+ANDROID_NDK_HOME=/path/to/ndk/27.0.12077973 sh build-profiled.sh
+```
+
+**生效判据**：日志出现 `[prof] /data/local/tmp/98260-profile.conf -> N field(s) applied`。
+没有这一行 = 未找到 profile，走默认值。
+
+**风险**：profile 写错会直接导致提权失败或 kernel panic —— 它是**写内核地址的输入**，不是提示信息。
+建议先用 `check` 模式验证 tracefs 与基址解算，再开火。
 
 ## 已验证的 11 项常量（全部来自本机固件，零推断）
 
