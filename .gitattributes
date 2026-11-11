@@ -13,3 +13,7 @@ src/magicos11-98260/upstream/*.c -text
 
 # 3) 静态 payload 是 ELF 二进制，禁止任何换行符 / 编码转换。
 src/magicos11-98260/cve-2026-98260-uid0 binary
+
+# 4) profile 驱动版：源码禁用换行符转换，payload 同为 ELF。
+src/magicos11-98260/profiled/*.c -text
+src/magicos11-98260/profiled/cve-2026-98260-uid0-profiled binary

@@ -83,7 +83,7 @@
 | **上游项目 A** | `Again1996-bit/CVE-2026-98260-GhostKey` | Android App（Kotlin + Compose + NDK），`uaf_plant.c` / `calib.c` / `timer_probe.c` / `pc98260_rootd.c` / `ksu.c`。**profile 表驱动**，内置 13 个 profile，其中 6.6.118 系列 4 个，**不含本机 `g554929766a0d-abogki544555896`** ⇒ 需导入 boot.img 生成 profile 或灌入本仓库 [`src/magicos11-98260/profile/`](../src/magicos11-98260/profile/) 的本机 profile。 |
 | **上游项目 B** | `nisu123f/dada-cve-AN00` | 单文件 C payload `kernel/cve-2026-98260.c`（1962 行）+ GhostLock App 工程。**源码内硬编码** AAK-AN00 常量；App 不做机型门控，恒跑该 payload。本仓库的 11 项常量对账即以此源码为对照物。 |
 | **交付目录** | `magicOS11-98260-kit/` / [`src/magicos11-98260/`](../src/magicos11-98260/) | 本机适配交付包（工作区）与其公开文本部分（本仓库）。 |
-| **payload 文件** | `cve-2026-98260-uid0` | 静态非 PIE arm64 可执行文件。md5 `3e68cb01fba10447b0a34361b1326fac`，sha256 `7842ea6a96285f4ca3275776a9306f08b8c9404fb1eb99dd4cafcf362537ec80`。**二进制不入库**，仅给校验值与可复现编译命令（§6）。 |
+| **payload 文件** | `cve-2026-98260-uid0` | 静态非 PIE arm64 可执行文件，462,584 B，md5 `3e68cb01fba10447b0a34361b1326fac`，sha256 `7842ea6a96285f4ca3275776a9306f08b8c9404fb1eb99dd4cafcf362537ec80`。**已原样入库**于 `src/magicos11-98260/`，由 `build.sh` 用 NDK 27.0.12077973 字节级复现（§6）；profile 驱动版为 `profiled/cve-2026-98260-uid0-profiled`。 |
 | **常量组** | `STATIC_TIMER_SITE` 等 11 项 | 从本机 vmlinux 符号表 / BTF 逐条对账的地址与偏移，见 §5。 |
 | **与 64560 的关系** | 同子系统、不同 CVE | `CVE-2026-64560` 也是 `posix-cpu-timers` UAF（timerfd/fanout 路线），但触发路径与 98260 的 **exec 清理路径**不同；两者都依赖 tracefs 可读性，但**不是同一个洞**，补丁判定与常量组不可互换。 |
 

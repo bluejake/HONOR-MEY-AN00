@@ -38,7 +38,7 @@ MEY-AN00（荣耀 500）临时 root 研究的文档与数据索引。
 | 路径 | 内容 |
 |---|---|
 | [`../src/dirtyfrag/`](../src/dirtyfrag/) | CVE-2026-43284 工具工程（Android App + JNI） |
-| [`../src/magicos11-98260/`](../src/magicos11-98260/) | CVE-2026-98260 文本基线：偏移头、BTF 偏移、profile、关键符号表、部署脚本 |
+| [`../src/magicos11-98260/`](../src/magicos11-98260/) | CVE-2026-98260 本机基线：偏移头、BTF 偏移、profile、关键符号表、上游源码、静态 payload、profile 驱动版与部署脚本 |
 
 ---
 

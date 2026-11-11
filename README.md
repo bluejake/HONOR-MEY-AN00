@@ -79,7 +79,8 @@
 │       └── MEY-AN00__CVE-2026-98260__ROOT-SUCCESS/
 └── src/
     ├── dirtyfrag/          CVE-2026-43284 工具工程（Android App + JNI）
-    └── magicos11-98260/    CVE-2026-98260 文本基线：偏移头、BTF 偏移、profile、关键符号表、部署脚本
+    └── magicos11-98260/    CVE-2026-98260 本机基线：偏移头、BTF 偏移、profile、关键符号表、
+                            上游源码、静态 payload、profile 驱动版与部署脚本
 ```
 
 ---
@@ -91,6 +92,9 @@
 ```bash
 # CVE-2026-43284 工具（MagicOS 10 路线）
 cd src/dirtyfrag && ./gradlew assembleDebug
+
+# CVE-2026-98260 profile 驱动 payload（换内核时改 profile 即可，无需重编常量）
+ANDROID_NDK_HOME=/path/to/ndk/27.0.12077973 sh src/magicos11-98260/build-profiled.sh
 ```
 
 原生层（`app/src/main/jni`）由 CMake 构建。**禁止 `-static-pie`**（在目标设备上会 SIGSEGV），只做动态链接。
